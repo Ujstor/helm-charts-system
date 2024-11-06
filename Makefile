@@ -19,7 +19,7 @@ d docs:
 
 
 ur update-readme: docs
-	@echo "Updating root README.md with module READMEs and custom separators..."
+	@echo "Updating root README.md with charts READMEs and custom separators..."
 	@echo "# K8s System related Helm Charts" > README.md
 	@echo >> README.md
 	@echo "Helm chart collection that simplifies Kubernetes configuration to be production-ready." >> README.md
