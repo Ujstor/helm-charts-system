@@ -9,11 +9,13 @@ package: $(CHARTS)
 
 $(CHARTS):
 	@echo "Packaging $@ chart..."
-	helm dependency update $@
 	helm package $@ --destination .
 index: package
 	@echo "Generating index.yaml..."
 	helm repo index . --url $(REPO_URL)
+
+dep-update:
+	@helm dependency upgrade $@
 
 clean:
 	@echo "Cleaning up old packages..."
@@ -51,8 +53,8 @@ ur update-readme: docs
 		echo >> README.md; \
 	done
 	@: > tmp.md
-	@head -n -5 README.md >> tmp.md
+	@head -n -6 README.md >> tmp.md
 	@mv tmp.md README.md
 	@echo "Root README.md updated with custom separators!"
 
-.PHONY: d docs hdi helm-docs ur update-readme package $(CHARTS) index clean all
+.PHONY: d docs hdi helm-docs ur update-readme package $(CHARTS) index clean dep-update all

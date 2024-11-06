@@ -8,5 +8,4 @@ cilium:
   loadBalancer:
     mode: "dsr"
   kubeProxyReplacement: true
-  tunnel: "disabled"
   autoDirectNodeRoutes: true

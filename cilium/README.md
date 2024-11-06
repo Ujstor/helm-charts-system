@@ -20,5 +20,4 @@ Cilium Helm chart configured by Ujstor
 | cilium.ipv4NativeRoutingCIDR | string | `"10.42.0.0/16"` |  |
 | cilium.kubeProxyReplacement | bool | `true` |  |
 | cilium.loadBalancer.mode | string | `"dsr"` |  |
-| cilium.tunnel | string | `"disabled"` |  |
 
