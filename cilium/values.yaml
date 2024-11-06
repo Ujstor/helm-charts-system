@@ -1,0 +1,12 @@
+cilium:
+  ipam:
+    operator:
+      clusterPoolIPv4PodCIDR: 10.42.0.0./16
+  ipv4NativeRoutingCIDR: 10.42.0.0/16
+  ipv4:
+    enabled: true
+  loadBalancer:
+    mode: "dsr"
+  kubeProxyReplacement: true
+  tunnel: "disabled"
+  autoDirectNodeRoutes: true

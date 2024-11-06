@@ -1,0 +1,12 @@
+cert-manager:
+  crds:
+    enabled: true
+
+clusterIssuer:
+  enabled: true
+  clusterIssuer:
+    metadata:
+      name: letsencrypt
+  privateKeySecretRef:
+    name: letsencrypt-prod
+  email:
