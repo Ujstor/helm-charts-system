@@ -51,7 +51,7 @@ ur update-readme: docs
 		echo >> README.md; \
 	done
 	@: > tmp.md
-	@head -n -4 README.md >> tmp.md
+	@head -n -5 README.md >> tmp.md
 	@mv tmp.md README.md
 	@echo "Root README.md updated with custom separators!"
 
