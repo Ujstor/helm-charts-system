@@ -14,10 +14,21 @@ Cilium Helm chart configured by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| cilium.autoDirectNodeRoutes | bool | `true` |  |
-| cilium.ipam.operator.clusterPoolIPv4PodCIDR | string | `"10.42.0.0./16"` |  |
+| cilium.bpf.masquerade | bool | `true` |  |
+| cilium.bpf.nativeRoutingCIDR | string | `"10.42.0.0/16"` |  |
+| cilium.clusterwide.enabled | bool | `true` |  |
+| cilium.dnsProxy.domain | string | `"cluster.local"` |  |
+| cilium.dnsProxy.enabled | bool | `true` |  |
+| cilium.etcd.enabled | bool | `false` |  |
+| cilium.hostServices.enabled | bool | `true` |  |
+| cilium.ipam.operator.clusterPoolIPv4PodCIDRList | string | `"10.42.0.0/16"` |  |
+| cilium.ipam.operator.mode | string | `"kubernetes"` |  |
 | cilium.ipv4.enabled | bool | `true` |  |
 | cilium.ipv4NativeRoutingCIDR | string | `"10.42.0.0/16"` |  |
+| cilium.k8sServiceHost | string | `nil` |  |
+| cilium.k8sServicePort | int | `6443` |  |
 | cilium.kubeProxyReplacement | bool | `true` |  |
-| cilium.loadBalancer.mode | string | `"dsr"` |  |
+| cilium.operator.replicas | int | `1` |  |
+| cilium.security.enableEncryption | bool | `true` |  |
+| cilium.security.enableHostFirewall | bool | `true` |  |
 

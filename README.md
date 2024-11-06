@@ -20,9 +20,10 @@ A Cert-Manager Helm chart config by Ujstor
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | cert-manager.crds.enabled | bool | `true` |  |
-| clusterIssuer.clusterIssuer.metadata.name | string | `"letsencrypt"` |  |
-| clusterIssuer.email | string | `nil` |  |
-| clusterIssuer.enabled | bool | `true` |  |
+| clusterIssuer.email | string | `"mail@mail.com"` |  |
+| clusterIssuer.enabled | bool | `false` |  |
+| clusterIssuer.ingressClassName | string | `"nginx"` |  |
+| clusterIssuer.metadata.name | string | `"letsencrypt"` |  |
 | clusterIssuer.privateKeySecretRef.name | string | `"letsencrypt-prod"` |  |
 
 
@@ -45,12 +46,23 @@ Cilium Helm chart configured by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| cilium.autoDirectNodeRoutes | bool | `true` |  |
-| cilium.ipam.operator.clusterPoolIPv4PodCIDR | string | `"10.42.0.0./16"` |  |
+| cilium.bpf.masquerade | bool | `true` |  |
+| cilium.bpf.nativeRoutingCIDR | string | `"10.42.0.0/16"` |  |
+| cilium.clusterwide.enabled | bool | `true` |  |
+| cilium.dnsProxy.domain | string | `"cluster.local"` |  |
+| cilium.dnsProxy.enabled | bool | `true` |  |
+| cilium.etcd.enabled | bool | `false` |  |
+| cilium.hostServices.enabled | bool | `true` |  |
+| cilium.ipam.operator.clusterPoolIPv4PodCIDRList | string | `"10.42.0.0/16"` |  |
+| cilium.ipam.operator.mode | string | `"kubernetes"` |  |
 | cilium.ipv4.enabled | bool | `true` |  |
 | cilium.ipv4NativeRoutingCIDR | string | `"10.42.0.0/16"` |  |
+| cilium.k8sServiceHost | string | `nil` |  |
+| cilium.k8sServicePort | int | `6443` |  |
 | cilium.kubeProxyReplacement | bool | `true` |  |
-| cilium.loadBalancer.mode | string | `"dsr"` |  |
+| cilium.operator.replicas | int | `1` |  |
+| cilium.security.enableEncryption | bool | `true` |  |
+| cilium.security.enableHostFirewall | bool | `true` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)

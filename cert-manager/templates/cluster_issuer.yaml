@@ -2,15 +2,15 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: {{ default "letsencrypt" .Values.clusterIssuer.metadata.name }}
+  name: {{ .Values.clusterIssuer.metadata.name }}
 spec:
   acme:
     email: {{ .Values.clusterIssuer.email }}
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     privateKeySecretRef:
-      name: {{ default "letsencrypt-prod" .Values.clusterIssuer.privateKeySecretRef.name }}
+      name: {{ .Values.clusterIssuer.privateKeySecretRef.name }}
     solvers:
     - http01:
         ingress:
-          ingressClassName: {{ default "nginx" .Values.clusterIssuer.ingressClassName }}
+          ingressClassName: {{ .Values.clusterIssuer.ingressClassName }}
 {{- end }}

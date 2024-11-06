@@ -3,14 +3,14 @@ entries:
   cert-manager:
   - apiVersion: v2
     appVersion: 1.16.1
-    created: "2024-11-06T21:03:23.610754395+01:00"
+    created: "2024-11-06T22:27:00.517503445+01:00"
     dependencies:
     - alias: cert-manager
       name: cert-manager
       repository: https://charts.jetstack.io
       version: 1.16.1
     description: A Cert-Manager Helm chart config by Ujstor
-    digest: ceb035ba5bf9b1f1076484b9837da3874455fd048bef7544eb50a37825a244f9
+    digest: eac2726651173f21b70d084441615a5b80100c6f28cdfb3ca3b86151a4631191
     name: cert-manager
     type: application
     urls:
@@ -19,14 +19,14 @@ entries:
   cilium:
   - apiVersion: v2
     appVersion: 1.16.3
-    created: "2024-11-06T21:03:23.618574737+01:00"
+    created: "2024-11-06T22:27:00.526089224+01:00"
     dependencies:
     - alias: cilium
       name: cilium
       repository: https://helm.cilium.io/
       version: 1.16.3
     description: Cilium Helm chart configured by Ujstor
-    digest: eb5b6843b3e9d24ed37ce85c0e06b12d76bd35f167d9b6c6741de0353793b3c3
+    digest: 64acecec2562580586debc541705a78c8439c293cbe87119230dec728082a4b3
     name: cilium
     type: application
     urls:
@@ -35,17 +35,17 @@ entries:
   ingress-nginx:
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2024-11-06T21:03:23.621018602+01:00"
+    created: "2024-11-06T22:27:00.528768897+01:00"
     dependencies:
     - alias: nginx
       name: ingress-nginx
       repository: https://kubernetes.github.io/ingress-nginx
       version: 4.11.3
     description: Nginx Helm chart by Ujstor
-    digest: f2ffc9bf08e5747fc494a946903f67350fc5c44c9771fd1d88e16db5e8d45d1a
+    digest: b835ea342197307c52bc4ea29bad2365e51599da9d8fd045850e067f7828bb17
     name: ingress-nginx
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-system/ingress-nginx-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-06T21:03:23.606837713+01:00"
+generated: "2024-11-06T22:27:00.513382838+01:00"

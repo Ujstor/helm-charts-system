@@ -3,10 +3,10 @@ cert-manager:
     enabled: true
 
 clusterIssuer:
-  enabled: true
-  clusterIssuer:
-    metadata:
-      name: letsencrypt
+  enabled: false
+  metadata:
+    name: "letsencrypt"
   privateKeySecretRef:
-    name: letsencrypt-prod
-  email:
+    name: "letsencrypt-prod"
+  ingressClassName: "nginx"
+  email: "mail@mail.com"
