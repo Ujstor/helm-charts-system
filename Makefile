@@ -1,4 +1,23 @@
-all: d ur 
+all: ur clean package index
+	@echo "Packaging complete and index.yaml updated."
+
+CHARTS := cert-manager cilium nginx
+
+REPO_URL := https://Ujstor.github.io/helm-charts-system
+
+package: $(CHARTS)
+
+$(CHARTS):
+	@echo "Packaging $@ chart..."
+	helm dependency update $@
+	helm package $@ --destination .
+index: package
+	@echo "Generating index.yaml..."
+	helm repo index . --url $(REPO_URL)
+
+clean:
+	@echo "Cleaning up old packages..."
+	rm -f *.tgz index.yaml
 
 hdi helm-docs:
 	@if -v helm-docs > /dev/null 2>&1; then \
@@ -24,7 +43,6 @@ ur update-readme: docs
 	@echo >> README.md
 	@echo "Helm chart collection that simplifies Kubernetes configuration to be production-ready." >> README.md
 	@echo >> README.md
-	@echo "![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)" >> README.md
 	@for readme in $$(find . -type f -name "README.md" | sort); do \
 		echo >> README.md; \
 		cat $$readme >> README.md; \
@@ -37,4 +55,4 @@ ur update-readme: docs
 	@mv tmp.md README.md
 	@echo "Root README.md updated with custom separators!"
 
-.PHONY: d docs hdi helm-docs ur update-readme
+.PHONY: d docs hdi helm-docs ur update-readme package $(CHARTS) index clean all

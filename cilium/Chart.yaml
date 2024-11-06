@@ -1,6 +1,6 @@
 apiVersion: v2
 name: cilium
-description: Cilium Helm chart
+description: Cilium Helm chart configured by Ujstor
 type: application
 version: 1.0.0
 appVersion: "1.16.3"

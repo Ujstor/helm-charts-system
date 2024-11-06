@@ -2,13 +2,12 @@
 
 Helm chart collection that simplifies Kubernetes configuration to be production-ready.
 
-![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
 
 # cert-manager
 
 ![Version: 0.1.0](https://img.shields.io/badge/Version-0.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.16.1](https://img.shields.io/badge/AppVersion-1.16.1-informational?style=flat-square)
 
-A Cert-Manager Helm chart
+A Cert-Manager Helm chart config by Ujstor
 
 ## Requirements
 
@@ -34,7 +33,7 @@ A Cert-Manager Helm chart
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.16.3](https://img.shields.io/badge/AppVersion-1.16.3-informational?style=flat-square)
 
-Cilium Helm chart
+Cilium Helm chart configured by Ujstor
 
 ## Requirements
 
@@ -62,7 +61,7 @@ Cilium Helm chart
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.11.3](https://img.shields.io/badge/AppVersion-1.11.3-informational?style=flat-square)
 
-Nginx Helm chart
+Nginx Helm chart by Ujstor
 
 ## Requirements
 
