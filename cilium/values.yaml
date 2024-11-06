@@ -1,38 +1,37 @@
 cilium:
   kubeProxyReplacement: true
-  k8sServiceHost:
+  k8sServiceHost: 127.0.0.1 #Single node
   k8sServicePort: 6443
+  sessionAffinity: true
 
   ipam:
+    mode: "kubernetes"
     operator:
-      mode: "kubernetes"
       clusterPoolIPv4PodCIDRList: 10.42.0.0/16
-  ipv4NativeRoutingCIDR: 10.42.0.0/16
+  ipv4NativeRoutingCIDR: "10.42.0.0/16"
   ipv4:
     enabled: true
+  ipv6:
+    enabled: false
+
+  enableIPMasqAgent: false
+  enableIPv4Masquerade: true
+  bpf:
+    masquerade: true
+
+  routingMode: "native" #Single node
+  autoDirectNodeRoutes: true #Single node
+
+  loadBalancer:
+    algorithm: "maglev"
+    mode: "snat" #Single node
 
   hostServices:
     enabled: true
+  bandwidthManager:
+    enabled: true
 
-  bpf:
-    masquerade: true
-    nativeRoutingCIDR: "10.42.0.0/16"
-
-  # loadBalancer:
-  #   mode: "dsr"
+  nodeinit:
+    enabled: true
   operator:
-    replicas: 1
-
-  dnsProxy:
-    enabled: true
-    domain: "cluster.local"
-
-  security:
-    enableHostFirewall: true
-    enableEncryption: true
-
-  etcd:
-    enabled: false
-
-  clusterwide:
-    enabled: true
+    replicas: 1 #Single node

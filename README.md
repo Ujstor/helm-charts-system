@@ -46,23 +46,26 @@ Cilium Helm chart configured by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| cilium.autoDirectNodeRoutes | bool | `true` |  |
+| cilium.bandwidthManager.enabled | bool | `true` |  |
 | cilium.bpf.masquerade | bool | `true` |  |
-| cilium.bpf.nativeRoutingCIDR | string | `"10.42.0.0/16"` |  |
-| cilium.clusterwide.enabled | bool | `true` |  |
-| cilium.dnsProxy.domain | string | `"cluster.local"` |  |
-| cilium.dnsProxy.enabled | bool | `true` |  |
-| cilium.etcd.enabled | bool | `false` |  |
+| cilium.enableIPMasqAgent | bool | `false` |  |
+| cilium.enableIPv4Masquerade | bool | `true` |  |
 | cilium.hostServices.enabled | bool | `true` |  |
+| cilium.ipam.mode | string | `"kubernetes"` |  |
 | cilium.ipam.operator.clusterPoolIPv4PodCIDRList | string | `"10.42.0.0/16"` |  |
-| cilium.ipam.operator.mode | string | `"kubernetes"` |  |
 | cilium.ipv4.enabled | bool | `true` |  |
 | cilium.ipv4NativeRoutingCIDR | string | `"10.42.0.0/16"` |  |
-| cilium.k8sServiceHost | string | `nil` |  |
+| cilium.ipv6.enabled | bool | `false` |  |
+| cilium.k8sServiceHost | string | `"127.0.0.1"` |  |
 | cilium.k8sServicePort | int | `6443` |  |
 | cilium.kubeProxyReplacement | bool | `true` |  |
+| cilium.loadBalancer.algorithm | string | `"maglev"` |  |
+| cilium.loadBalancer.mode | string | `"snat"` |  |
+| cilium.nodeinit.enabled | bool | `true` |  |
 | cilium.operator.replicas | int | `1` |  |
-| cilium.security.enableEncryption | bool | `true` |  |
-| cilium.security.enableHostFirewall | bool | `true` |  |
+| cilium.routingMode | string | `"native"` |  |
+| cilium.sessionAffinity | bool | `true` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
