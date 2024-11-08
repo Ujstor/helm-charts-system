@@ -1,7 +1,7 @@
 all: ur clean package index
 	@echo "Packaging complete and index.yaml updated."
 
-CHARTS := cert-manager cilium nginx
+CHARTS := cert-manager cilium ingress-nginx
 
 REPO_URL := https://Ujstor.github.io/helm-charts-system
 

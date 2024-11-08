@@ -15,9 +15,4 @@ A Cert-Manager Helm chart config by Ujstor
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | cert-manager.crds.enabled | bool | `true` |  |
-| clusterIssuer.email | string | `"mail@mail.com"` |  |
-| clusterIssuer.enabled | bool | `false` |  |
-| clusterIssuer.ingressClassName | string | `"nginx"` |  |
-| clusterIssuer.metadata.name | string | `"letsencrypt"` |  |
-| clusterIssuer.privateKeySecretRef.name | string | `"letsencrypt-prod"` |  |
 

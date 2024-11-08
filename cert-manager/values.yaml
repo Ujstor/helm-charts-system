@@ -1,12 +1,3 @@
 cert-manager:
   crds:
     enabled: true
-
-clusterIssuer:
-  enabled: false
-  metadata:
-    name: "letsencrypt"
-  privateKeySecretRef:
-    name: "letsencrypt-prod"
-  ingressClassName: "nginx"
-  email: "mail@mail.com"
