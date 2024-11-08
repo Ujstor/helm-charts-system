@@ -1,7 +1,7 @@
 all: ur clean package index
 	@echo "Packaging complete and index.yaml updated."
 
-CHARTS := cert-manager cilium ingress-nginx
+CHARTS := cert-manager cilium ingress-nginx argo-cd
 
 REPO_URL := https://Ujstor.github.io/helm-charts-system
 
@@ -9,7 +9,7 @@ package: $(CHARTS)
 
 $(CHARTS):
 	@echo "Packaging $@ chart..."
-	# @helm dependency update $@
+	@helm dependency update $@
 	helm package $@ --destination .
 index: package
 	@echo "Generating index.yaml..."
