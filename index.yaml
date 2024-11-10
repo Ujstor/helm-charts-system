@@ -3,14 +3,14 @@ entries:
   argo-cd:
   - apiVersion: v2
     appVersion: v2.13.0
-    created: "2024-11-08T23:27:42.330853079+01:00"
+    created: "2024-11-10T19:17:33.719309313+01:00"
     dependencies:
     - alias: argo
       name: argo-cd
       repository: https://argoproj.github.io/argo-helm
       version: 7.7.0
     description: Argo Helm chart configured by Ujstor
-    digest: 6a425475050d20d2eba920c3271d8e3140d5e2653108fa653ee758cd507a7a97
+    digest: cc700f9d4d48ef3e7f442d841164c013143ec05873bf1a69a4739649063a4e64
     name: argo-cd
     type: application
     urls:
@@ -19,14 +19,14 @@ entries:
   cert-manager:
   - apiVersion: v2
     appVersion: 1.16.1
-    created: "2024-11-08T23:27:42.33468208+01:00"
+    created: "2024-11-10T19:17:33.723130904+01:00"
     dependencies:
     - alias: cert-manager
       name: cert-manager
       repository: https://charts.jetstack.io
       version: 1.16.1
     description: A Cert-Manager Helm chart config by Ujstor
-    digest: cef55aa6482044861baa5a1c9f311e4cfcbc4b2ffea98b978b1d48f2a31037ef
+    digest: 2aef93a05e14e0c2ab3cb1c9835ccdca16b54ab6d108a36f29952fdae89c0462
     name: cert-manager
     type: application
     urls:
@@ -35,14 +35,14 @@ entries:
   cilium:
   - apiVersion: v2
     appVersion: 1.16.3
-    created: "2024-11-08T23:27:42.343184679+01:00"
+    created: "2024-11-10T19:17:33.731390278+01:00"
     dependencies:
     - alias: cilium
       name: cilium
       repository: https://helm.cilium.io/
       version: 1.16.3
     description: Cilium Helm chart configured by Ujstor
-    digest: 1bb48376dd7ac242b6239cbf37e8b32f403dfe60cbe0e250b81159244c037e83
+    digest: 275b8c04364f5362723e5b3728035dc6d6c569239dce99bca6359bfc8b010b9e
     name: cilium
     type: application
     urls:
@@ -51,17 +51,17 @@ entries:
   ingress-nginx:
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2024-11-08T23:27:42.345678022+01:00"
+    created: "2024-11-10T19:17:33.733941162+01:00"
     dependencies:
     - alias: nginx
       name: ingress-nginx
       repository: https://kubernetes.github.io/ingress-nginx
       version: 4.11.3
     description: Nginx Helm chart
-    digest: 55b4097ca43309bdebda5689248ee76e91100e4d4e0eb16e8f15350242e21124
+    digest: e6820c184a8f57f7810696a88549ad7984fbb8f05a16c0545efd130bc89843d7
     name: ingress-nginx
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-system/ingress-nginx-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-08T23:27:42.321751251+01:00"
+generated: "2024-11-10T19:17:33.703653972+01:00"

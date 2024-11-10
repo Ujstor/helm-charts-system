@@ -8,7 +8,6 @@ cilium:
     mode: "cluster-pool"
     operator:
       clusterPoolIPv4PodCIDRList: 10.250.0.0/16
-  ipv4NativeRoutingCIDR: "10.250.0.0/16"
   ipv4:
     enabled: true
   ipv6:
@@ -22,8 +21,9 @@ cilium:
 
   loadBalancer:
     algorithm: "maglev"
-    mode: "dsr"
+    mode: "snat"
     acceleration: "native"
+  ipv4NativeRoutingCIDR: "10.250.0.0/16"
 
   hostServices:
     enabled: true
@@ -38,3 +38,6 @@ cilium:
   encryption:
     enabled: true
     type: "ipsec"
+
+  envoy:
+    enabled: false

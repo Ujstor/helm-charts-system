@@ -21,6 +21,7 @@ Cilium Helm chart configured by Ujstor
 | cilium.enableIPv4Masquerade | bool | `true` |  |
 | cilium.encryption.enabled | bool | `true` |  |
 | cilium.encryption.type | string | `"ipsec"` |  |
+| cilium.envoy.enabled | bool | `false` |  |
 | cilium.hostServices.enabled | bool | `true` |  |
 | cilium.ipam.mode | string | `"cluster-pool"` |  |
 | cilium.ipam.operator.clusterPoolIPv4PodCIDRList | string | `"10.250.0.0/16"` |  |
@@ -32,7 +33,7 @@ Cilium Helm chart configured by Ujstor
 | cilium.kubeProxyReplacement | bool | `true` |  |
 | cilium.loadBalancer.acceleration | string | `"native"` |  |
 | cilium.loadBalancer.algorithm | string | `"maglev"` |  |
-| cilium.loadBalancer.mode | string | `"dsr"` |  |
+| cilium.loadBalancer.mode | string | `"snat"` |  |
 | cilium.nodeinit.enabled | bool | `true` |  |
 | cilium.nodeinit.reconfigureKubelet | bool | `true` |  |
 | cilium.nodeinit.removeCbrBridge | bool | `true` |  |
