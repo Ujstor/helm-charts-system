@@ -1,0 +1,5 @@
+vault:
+  dataStorage:
+    size: 2Gi
+  ui:
+    enabled: true

@@ -9,7 +9,7 @@ package: $(CHARTS)
 
 $(CHARTS):
 	@echo "Packaging $@ chart..."
-	@helm dependency update $@
+	@helm dependency update $@ || helm dependency build $@
 	helm package $@ --destination .
 index: package
 	@echo "Generating index.yaml..."

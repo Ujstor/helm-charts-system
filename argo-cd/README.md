@@ -15,10 +15,4 @@ Argo Helm chart configured by Ujstor
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | argo.global.domain | string | `nil` |  |
-| argo.server.ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
-| argo.server.ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |
-| argo.server.ingress.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
-| argo.server.ingress.enabled | bool | `true` |  |
-| argo.server.ingress.ingressClassName | string | `"nginx"` |  |
-| argo.server.ingress.tls | bool | `true` |  |
 

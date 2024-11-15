@@ -20,12 +20,6 @@ Argo Helm chart configured by Ujstor
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | argo.global.domain | string | `nil` |  |
-| argo.server.ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
-| argo.server.ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |
-| argo.server.ingress.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
-| argo.server.ingress.enabled | bool | `true` |  |
-| argo.server.ingress.ingressClassName | string | `"nginx"` |  |
-| argo.server.ingress.tls | bool | `true` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
@@ -111,3 +105,26 @@ Nginx Helm chart
 | https://kubernetes.github.io/ingress-nginx | nginx(ingress-nginx) | 4.11.3 |
 
 
+![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
+
+
+
+![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
+
+
+# hashicorp-vault
+
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.18.1](https://img.shields.io/badge/AppVersion-1.18.1-informational?style=flat-square)
+
+Vault Helm chart configured by Ujstor
+
+## Requirements
+
+| Repository | Name | Version |
+|------------|------|---------|
+| https://helm.releases.hashicorp.com | vault | 0.29.0 |
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
