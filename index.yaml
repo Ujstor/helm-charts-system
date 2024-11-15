@@ -3,14 +3,14 @@ entries:
   argo-cd:
   - apiVersion: v2
     appVersion: v2.13.0
-    created: "2024-11-16T00:19:07.56616917+01:00"
+    created: "2024-11-16T00:37:44.290462189+01:00"
     dependencies:
     - alias: argo
       name: argo-cd
       repository: https://argoproj.github.io/argo-helm
       version: 7.7.3
     description: Argo Helm chart configured by Ujstor
-    digest: ca54cd2b16207d6fc4600ff84e3238395d921c60c251f69ebbc8e4b736ebe857
+    digest: 22ef04522821c533f21a8c487e9dd5487cbb6d9d027b9a5949c2d9d910b23227
     name: argo-cd
     type: application
     urls:
@@ -19,14 +19,14 @@ entries:
   cert-manager:
   - apiVersion: v2
     appVersion: 1.16.1
-    created: "2024-11-16T00:19:07.570187622+01:00"
+    created: "2024-11-16T00:37:44.294392671+01:00"
     dependencies:
     - alias: cert-manager
       name: cert-manager
       repository: https://charts.jetstack.io
       version: 1.16.1
     description: A Cert-Manager Helm chart config by Ujstor
-    digest: 6e2f61e1c66555f1117cca150e0b46fb86145edb140585a67d7e1ca8dc566c10
+    digest: 5444b3d97e4f74611ce02e3ebe7429aeb15aed8eb6518a95191975d77c51753d
     name: cert-manager
     type: application
     urls:
@@ -35,33 +35,48 @@ entries:
   cilium:
   - apiVersion: v2
     appVersion: 1.16.3
-    created: "2024-11-16T00:19:07.579883336+01:00"
+    created: "2024-11-16T00:37:44.302763076+01:00"
     dependencies:
     - alias: cilium
       name: cilium
       repository: https://helm.cilium.io/
       version: 1.16.3
     description: Cilium Helm chart configured by Ujstor
-    digest: 53d49f3c0cb0eedd766ade1ce376f759b67f99dd53e32db111922cb641229aa5
+    digest: dd37c0eb3995656d095197768915f42d06ad2a28616a2fde5d1a061c19ec8d7b
     name: cilium
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-system/cilium-1.0.0.tgz
     version: 1.0.0
+  hashicorp-vault:
+  - apiVersion: v2
+    appVersion: 1.18.1
+    created: "2024-11-16T00:37:44.304982997+01:00"
+    dependencies:
+    - name: vault
+      repository: https://helm.releases.hashicorp.com
+      version: 0.29.0
+    description: Vault Helm chart configured by Ujstor
+    digest: 2709a2185475ebb8df2df429ae8f7025609a197a319c1952f9900d836de6424f
+    name: hashicorp-vault
+    type: application
+    urls:
+    - https://Ujstor.github.io/helm-charts-system/hashicorp-vault-1.0.0.tgz
+    version: 1.0.0
   ingress-nginx:
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2024-11-16T00:19:07.583127094+01:00"
+    created: "2024-11-16T00:37:44.307625856+01:00"
     dependencies:
     - alias: nginx
       name: ingress-nginx
       repository: https://kubernetes.github.io/ingress-nginx
       version: 4.11.3
     description: Nginx Helm chart
-    digest: 2a1662c11cbf1e560147f3915db8f83d05579271bae0da262e96d933066df84d
+    digest: 68eb516b9f531602b89677c2d166820697727a68fa01fb71950cbb802db4ada0
     name: ingress-nginx
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-system/ingress-nginx-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-16T00:19:07.557151366+01:00"
+generated: "2024-11-16T00:37:44.279308792+01:00"
