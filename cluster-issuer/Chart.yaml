@@ -1,0 +1,6 @@
+apiVersion: v2
+name: cluster-issuer
+description: A Cert-Manager ClusterIssuer Helm chart config by Ujstor
+type: application
+version: 1.0.0
+appVersion: "0.0.1"

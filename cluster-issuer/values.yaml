@@ -1,0 +1,8 @@
+clusterIssuer:
+  enabled: true
+  metadata:
+    name: "letsencrypt"
+  privateKeySecretRef:
+    name: "letsencrypt-prod"
+  ingressClassName: "nginx"
+  email:

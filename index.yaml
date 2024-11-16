@@ -3,14 +3,14 @@ entries:
   argo-cd:
   - apiVersion: v2
     appVersion: v2.13.0
-    created: "2024-11-16T01:54:07.739245149+01:00"
+    created: "2024-11-16T02:09:48.7174061+01:00"
     dependencies:
     - alias: argo
       name: argo-cd
       repository: https://argoproj.github.io/argo-helm
       version: 7.7.3
     description: Argo Helm chart configured by Ujstor
-    digest: dfd4eaf258e9b0a9fb617f1a792c7ae62df400a9874e51ee9000d21345af2cb7
+    digest: 861989a390705a48166c360f243a75bec8ff352984ee69b05f503c5fff20e7f4
     name: argo-cd
     type: application
     urls:
@@ -19,14 +19,14 @@ entries:
   cert-manager:
   - apiVersion: v2
     appVersion: 1.16.1
-    created: "2024-11-16T01:54:07.743812694+01:00"
+    created: "2024-11-16T02:09:48.721390468+01:00"
     dependencies:
     - alias: cert-manager
       name: cert-manager
       repository: https://charts.jetstack.io
       version: 1.16.1
     description: A Cert-Manager Helm chart config by Ujstor
-    digest: a6b4cb71853259242a0c27becc5370576b5c85d9a94605695626862dca3107f2
+    digest: ba46e40f836e181df955f14d8dfbd27399c7f0631cf0fb64e7433afdc92cbdfe
     name: cert-manager
     type: application
     urls:
@@ -35,29 +35,40 @@ entries:
   cilium:
   - apiVersion: v2
     appVersion: 1.16.3
-    created: "2024-11-16T01:54:07.752077032+01:00"
+    created: "2024-11-16T02:09:48.729346556+01:00"
     dependencies:
     - alias: cilium
       name: cilium
       repository: https://helm.cilium.io/
       version: 1.16.3
     description: Cilium Helm chart configured by Ujstor
-    digest: 6c40f223e8fac79b8c8f330148c6b9f5454378b847465972b645b6bb6b94e52d
+    digest: fa483b201b4f9c746f003898baa027e603a8b37d0d129bb8f504bd4e181a4b75
     name: cilium
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-system/cilium-1.0.0.tgz
     version: 1.0.0
+  cluster-issuer:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2024-11-16T02:09:48.729473157+01:00"
+    description: A Cert-Manager ClusterIssuer Helm chart config by Ujstor
+    digest: 98502f4d349d19128ea360efb7fe50b8e49289220b1b9e206345262419d5fd93
+    name: cluster-issuer
+    type: application
+    urls:
+    - https://Ujstor.github.io/helm-charts-system/cluster-issuer-1.0.0.tgz
+    version: 1.0.0
   external-secrets:
   - apiVersion: v2
     appVersion: v0.10.5
-    created: "2024-11-16T01:54:07.754696641+01:00"
+    created: "2024-11-16T02:09:48.732063302+01:00"
     dependencies:
     - name: external-secrets
       repository: https://charts.external-secrets.io
       version: 0.10.5
     description: External-Secrets Helm chart configured by Ujstor
-    digest: 10fa35cc58d59b3ba5b62a06c7df3b7ea3b6692f94c4925ff4dcb86f15c74dc3
+    digest: f840169aa9d04fbf3e880dabb0c42d541f730f6fa9b6078f81d75cffcc5e2cfa
     name: external-secrets
     type: application
     urls:
@@ -66,13 +77,13 @@ entries:
   hashicorp-vault:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2024-11-16T01:54:07.756728198+01:00"
+    created: "2024-11-16T02:09:48.734534365+01:00"
     dependencies:
     - name: vault
       repository: https://helm.releases.hashicorp.com
       version: 0.29.0
     description: Vault Helm chart configured by Ujstor
-    digest: 0fbb825db80a480d7edaffa98c7387df9fb42ba6b6f73c12cba4ecfc99464c86
+    digest: 2bc236e1de218ccc104774d103019dad0bc5d8137af72308c076e7b10f03690b
     name: hashicorp-vault
     type: application
     urls:
@@ -81,17 +92,17 @@ entries:
   ingress-nginx:
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2024-11-16T01:54:07.760078799+01:00"
+    created: "2024-11-16T02:09:48.73709651+01:00"
     dependencies:
     - alias: nginx
       name: ingress-nginx
       repository: https://kubernetes.github.io/ingress-nginx
       version: 4.11.3
     description: Nginx Helm chart
-    digest: 3996195b1fa25d85b8eb8bf524769111c65a8bdd1acb0a60509b2ba335c835cc
+    digest: 2f5da5aaf473f146d2dca5c3b4a5d6998591e07373015946c07d65f066fa2b4a
     name: ingress-nginx
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-system/ingress-nginx-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-16T01:54:07.730131208+01:00"
+generated: "2024-11-16T02:09:48.708654147+01:00"
