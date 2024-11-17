@@ -3,14 +3,14 @@ entries:
   argo-cd:
   - apiVersion: v2
     appVersion: v2.13.0
-    created: "2024-11-16T02:09:48.7174061+01:00"
+    created: "2024-11-17T20:58:41.466976575+01:00"
     dependencies:
     - alias: argo
       name: argo-cd
       repository: https://argoproj.github.io/argo-helm
       version: 7.7.3
     description: Argo Helm chart configured by Ujstor
-    digest: 861989a390705a48166c360f243a75bec8ff352984ee69b05f503c5fff20e7f4
+    digest: b382564a29e26ec014e348dc563d9e586887670cb81b02207c4cf64559853c8e
     name: argo-cd
     type: application
     urls:
@@ -19,14 +19,14 @@ entries:
   cert-manager:
   - apiVersion: v2
     appVersion: 1.16.1
-    created: "2024-11-16T02:09:48.721390468+01:00"
+    created: "2024-11-17T20:58:41.472122267+01:00"
     dependencies:
     - alias: cert-manager
       name: cert-manager
       repository: https://charts.jetstack.io
       version: 1.16.1
     description: A Cert-Manager Helm chart config by Ujstor
-    digest: ba46e40f836e181df955f14d8dfbd27399c7f0631cf0fb64e7433afdc92cbdfe
+    digest: ef050e073ff4a4f8a38a9abe65328edb57a0ebab611e5ce05de0616358282966
     name: cert-manager
     type: application
     urls:
@@ -35,14 +35,14 @@ entries:
   cilium:
   - apiVersion: v2
     appVersion: 1.16.3
-    created: "2024-11-16T02:09:48.729346556+01:00"
+    created: "2024-11-17T20:58:41.48142536+01:00"
     dependencies:
     - alias: cilium
       name: cilium
       repository: https://helm.cilium.io/
       version: 1.16.3
     description: Cilium Helm chart configured by Ujstor
-    digest: fa483b201b4f9c746f003898baa027e603a8b37d0d129bb8f504bd4e181a4b75
+    digest: ab34d98592caedad16c6a4926147eca7d52fd5c45c00e442f12eb14f06bac7e1
     name: cilium
     type: application
     urls:
@@ -51,9 +51,9 @@ entries:
   cluster-issuer:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-11-16T02:09:48.729473157+01:00"
+    created: "2024-11-17T20:58:41.481570413+01:00"
     description: A Cert-Manager ClusterIssuer Helm chart config by Ujstor
-    digest: 98502f4d349d19128ea360efb7fe50b8e49289220b1b9e206345262419d5fd93
+    digest: 411a4c21a1f011e1aa54cf90cd134da033db4d8b40a56b01a97e6a3ac9d1d3c0
     name: cluster-issuer
     type: application
     urls:
@@ -62,13 +62,13 @@ entries:
   external-secrets:
   - apiVersion: v2
     appVersion: v0.10.5
-    created: "2024-11-16T02:09:48.732063302+01:00"
+    created: "2024-11-17T20:58:41.485041504+01:00"
     dependencies:
     - name: external-secrets
       repository: https://charts.external-secrets.io
       version: 0.10.5
     description: External-Secrets Helm chart configured by Ujstor
-    digest: f840169aa9d04fbf3e880dabb0c42d541f730f6fa9b6078f81d75cffcc5e2cfa
+    digest: c7a2a9a331c2eb22249506301c48865526c842100c7b3f4b4a39b1000269b008
     name: external-secrets
     type: application
     urls:
@@ -77,13 +77,13 @@ entries:
   hashicorp-vault:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2024-11-16T02:09:48.734534365+01:00"
+    created: "2024-11-17T20:58:41.488046657+01:00"
     dependencies:
     - name: vault
       repository: https://helm.releases.hashicorp.com
       version: 0.29.0
     description: Vault Helm chart configured by Ujstor
-    digest: 2bc236e1de218ccc104774d103019dad0bc5d8137af72308c076e7b10f03690b
+    digest: 71f5623262c7de41297f6cdc3659771b348ac14d6dc9c1c10dfef227478e38bc
     name: hashicorp-vault
     type: application
     urls:
@@ -92,17 +92,40 @@ entries:
   ingress-nginx:
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2024-11-16T02:09:48.73709651+01:00"
+    created: "2024-11-17T20:58:41.492070329+01:00"
     dependencies:
     - alias: nginx
       name: ingress-nginx
       repository: https://kubernetes.github.io/ingress-nginx
       version: 4.11.3
     description: Nginx Helm chart
-    digest: 2f5da5aaf473f146d2dca5c3b4a5d6998591e07373015946c07d65f066fa2b4a
+    digest: 8b2b0b3059a905d67fbc6611f9ec89fdcbb99f918c4dc7a58b277a4a772603c8
     name: ingress-nginx
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-system/ingress-nginx-1.0.0.tgz
     version: 1.0.0
-generated: "2024-11-16T02:09:48.708654147+01:00"
+  postgres-cluster:
+  - apiVersion: v2
+    appVersion: 5.6.0
+    created: "2024-11-17T20:58:41.492454036+01:00"
+    description: A PGO Cluster Helm chart for Kubernetes
+    digest: 4d0a0fbbea50616b381197f403cc37bc915a23a7b3e1cb92dd20f61db5657b67
+    name: postgres-cluster
+    type: application
+    urls:
+    - https://Ujstor.github.io/helm-charts-system/postgres-cluster-1.0.0.tgz
+    version: 1.0.0
+  postgres-operator:
+  - apiVersion: v2
+    appVersion: 5.7.0
+    created: "2024-11-17T20:58:41.492819922+01:00"
+    description: Installer for PGO, the open source Postgres Operator from Crunchy
+      Data
+    digest: 0cafcfefbd04f939bb45c3524cb3b1b108cb33a0c894729faf6d6b402ae76d1e
+    name: postgres-operator
+    type: application
+    urls:
+    - https://Ujstor.github.io/helm-charts-system/postgres-operator-1.0.0.tgz
+    version: 1.0.0
+generated: "2024-11-17T20:58:41.453136171+01:00"
