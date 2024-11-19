@@ -6,7 +6,7 @@ metadata:
 spec:
   acme:
     email: {{ .Values.clusterIssuer.email }}
-    server: {{ .Value.clusterIssuer.server }}
+    server: {{ .Values.clusterIssuer.server }}
     privateKeySecretRef:
       name: {{ .Values.clusterIssuer.privateKeySecretRef.name }}
     solvers:
