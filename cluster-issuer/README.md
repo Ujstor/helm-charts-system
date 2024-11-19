@@ -13,4 +13,5 @@ A Cert-Manager ClusterIssuer Helm chart config by Ujstor
 | clusterIssuer.ingressClassName | string | `"nginx"` |  |
 | clusterIssuer.metadata.name | string | `"letsencrypt"` |  |
 | clusterIssuer.privateKeySecretRef.name | string | `"letsencrypt-prod"` |  |
+| clusterIssuer.server | string | `"https://acme-v02.api.letsencrypt.org/directory"` |  |
 

@@ -103,6 +103,7 @@ A Cert-Manager ClusterIssuer Helm chart config by Ujstor
 | clusterIssuer.ingressClassName | string | `"nginx"` |  |
 | clusterIssuer.metadata.name | string | `"letsencrypt"` |  |
 | clusterIssuer.privateKeySecretRef.name | string | `"letsencrypt-prod"` |  |
+| clusterIssuer.server | string | `"https://acme-v02.api.letsencrypt.org/directory"` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
@@ -186,6 +187,12 @@ Nginx Helm chart
 | Repository | Name | Version |
 |------------|------|---------|
 | https://kubernetes.github.io/ingress-nginx | nginx(ingress-nginx) | 4.11.3 |
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| ingress-nginx.controller.admissionWebhooks.enabled | bool | `true` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
