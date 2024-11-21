@@ -1,0 +1,68 @@
+resources:
+  limits:
+    memory: 512Mi
+  requests:
+    cpu: 200m
+    memory: 128Mi
+csi:
+  csiRBDProvisionerResource: |
+    - name : csi-rbdplugin
+      resource:
+        requests:
+          memory: 512Mi
+        limits:
+          memory: 1Gi
+    - name : csi-omap-generator
+      resource:
+        requests:
+          memory: 512Mi
+          cpu: 250m
+        limits:
+          memory: 1Gi
+  csiRBDPluginResource: |
+    - name : csi-rbdplugin
+      resource:
+        requests:
+          memory: 512Mi
+          cpu: 250m
+        limits:
+          memory: 1Gi
+  csiCephFSProvisionerResource: |
+    - name : csi-cephfsplugin
+      resource:
+        requests:
+          memory: 512Mi
+          cpu: 250m
+        limits:
+          memory: 1Gi
+  csiCephFSPluginResource: |
+    - name : csi-cephfsplugin
+      resource:
+        requests:
+          memory: 512Mi
+          cpu: 250m
+        limits:
+          memory: 1Gi
+  csiNFSProvisionerResource: |
+    - name : csi-nfsplugin
+      resource:
+        requests:
+          memory: 512Mi
+          cpu: 250m
+        limits:
+          memory: 1Gi
+    - name : csi-attacher
+      resource:
+        requests:
+          memory: 512Mi
+          cpu: 250m
+        limits:
+          memory: 1Gi
+  csiNFSPluginResource: |
+    - name : csi-nfsplugin
+      resource:
+        requests:
+          memory: 512Mi
+          cpu: 250m
+        limits:
+          memory: 1Gi
