@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/name: pgo
     app.kubernetes.io/version: 5.7.0
-  name: pgupgrades.postgres-operator
+  name: pgupgrades.postgres-operator.crunchydata.com
 spec:
   group: postgres-operator.crunchydata.com
   names:
