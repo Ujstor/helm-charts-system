@@ -1,13 +1,3 @@
-secretStore:
-  clusterWide: false
-  provider:
-    type: kubernetes
-    kubernetes:
-      auth:
-        serviceAccount:
-          create: true
-          name: "todo-secret-store-sa"
-
 # # Kubernets
 # secretStore:
 #   clusterWide: false
@@ -53,9 +43,8 @@ secretStore:
 #   annotations:
 #     description: "Kubernetes secrets store"
 #
-## Vault
+# Vault
 # secretStore:
-#   clusterWide: false
 #   provider:
 #     type: vault
 #     vault:
@@ -71,7 +60,6 @@ secretStore:
 
 ## AWS
 # secretStore:
-#   clusterWide: true
 #   provider:
 #     type: aws
 #     aws:
