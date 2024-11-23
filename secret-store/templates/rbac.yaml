@@ -1,22 +1,40 @@
 {{- if eq .Values.secretStore.provider.type "kubernetes" }}
 {{- if .Values.secretStore.clusterWide }}
-# ClusterRole for cluster-wide access
+# ClusterRole for cluster-wide access with restrictions
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: {{ include "secret-store.fullname" . }}-reader
+  name: {{ include "secret-store.fullname" . }}-reader-restricted
   labels:
     {{- include "secret-store.labels" . | nindent 4 }}
 rules:
 - apiGroups: [""]
   resources: ["secrets"]
   verbs: ["get", "list", "watch"]
+  {{- if or .Values.secretStore.provider.kubernetes.allowedNamespaces .Values.secretStore.provider.kubernetes.allowedSecrets }}
+  # If either namespaces or secrets are restricted, create separate rules
+  {{- if .Values.secretStore.provider.kubernetes.allowedSecrets }}
+  resourceNames:
+  {{- range .Values.secretStore.provider.kubernetes.allowedSecrets }}
+    - {{ . | quote }}
+  {{- end }}
+  {{- end }}
+- apiGroups: [""]
+  resources: ["namespaces"]
+  verbs: ["get", "list", "watch"]
+  {{- if .Values.secretStore.provider.kubernetes.allowedNamespaces }}
+  resourceNames:
+  {{- range .Values.secretStore.provider.kubernetes.allowedNamespaces }}
+    - {{ . | quote }}
+  {{- end }}
+  {{- end }}
+  {{- end }}
 ---
 # ClusterRoleBinding for the ServiceAccount
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: {{ include "secret-store.fullname" . }}-reader
+  name: {{ include "secret-store.fullname" . }}-reader-restricted
   labels:
     {{- include "secret-store.labels" . | nindent 4 }}
 subjects:
@@ -25,7 +43,7 @@ subjects:
   namespace: {{ .Release.Namespace }}
 roleRef:
   kind: ClusterRole
-  name: {{ include "secret-store.fullname" . }}-reader
+  name: {{ include "secret-store.fullname" . }}-reader-restricted
   apiGroup: rbac.authorization.k8s.io
 {{- else }}
 # Role for namespace-specific access
@@ -33,20 +51,26 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: {{ include "secret-store.fullname" . }}-remote-reader
-  namespace: {{ .Values.secretStore.provider.kubernetes.remoteNamespace }}
+  namespace: {{ .Values.secretStore.provider.kubernetes.remoteNamespace | default .Release.Namespace }}
   labels:
     {{- include "secret-store.labels" . | nindent 4 }}
 rules:
 - apiGroups: [""]
   resources: ["secrets"]
   verbs: ["get", "list", "watch"]
+  {{- if .Values.secretStore.provider.kubernetes.allowedSecrets }}
+  resourceNames:
+  {{- range .Values.secretStore.provider.kubernetes.allowedSecrets }}
+    - {{ . | quote }}
+  {{- end }}
+  {{- end }}
 ---
 # RoleBinding for the ServiceAccount
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: {{ include "secret-store.fullname" . }}-remote-reader
-  namespace: {{ .Values.secretStore.provider.kubernetes.remoteNamespace }}
+  namespace: {{ .Values.secretStore.provider.kubernetes.remoteNamespace | default .Release.Namespace }}
   labels:
     {{- include "secret-store.labels" . | nindent 4 }}
 subjects:
@@ -58,23 +82,4 @@ roleRef:
   name: {{ include "secret-store.fullname" . }}-remote-reader
   apiGroup: rbac.authorization.k8s.io
 {{- end }}
-{{- end }}
-
-# Optional: Add namespace restrictions for ClusterRole
-{{- if and .Values.secretStore.clusterWide .Values.secretStore.provider.kubernetes.allowedNamespaces }}
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: {{ include "secret-store.fullname" . }}-reader-restricted
-  labels:
-    {{- include "secret-store.labels" . | nindent 4 }}
-rules:
-- apiGroups: [""]
-  resources: ["secrets"]
-  verbs: ["get", "list", "watch"]
-  resourceNames:
-  {{- range .Values.secretStore.provider.kubernetes.allowedNamespaces }}
-  - {{ . }}
-  {{- end }}
 {{- end }}

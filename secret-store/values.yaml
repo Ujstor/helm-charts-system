@@ -1,24 +1,59 @@
-nameOverride: ""
-fullnameOverride: ""
-
 secretStore:
-  clusterWide: true
+  clusterWide: false
   provider:
     type: kubernetes
     kubernetes:
-      remoteNamespace: default # Source namespace
-       # Optional: restrict access to specific namespaces if cluster wide true
-      allowedNamespaces: []  # e.g., ["production", "staging"]
       auth:
         serviceAccount:
           create: true
-          name: "my-secret-store-sa"
-          annotations: {}  # Specific annotations for ServiceAccount
-  labels:
-    environment: prod
-  annotations:
-    description: "Kubernetes secrets store"
+          name: "todo-secret-store-sa"
 
+# # Kubernets
+# secretStore:
+#   clusterWide: false
+#   provider:
+#     type: kubernetes
+#     kubernetes:
+#       auth:
+#         serviceAccount:
+#           create: true
+#           name: "todo-secret-store-sa"
+#   labels:
+#     environment: prod
+#   annotations:
+#     description: "Kubernetes secrets store"
+
+# nameOverride: ""
+# fullnameOverride: ""
+#
+# secretStore:
+#   clusterWide: true
+#   provider:
+#     type: kubernetes
+#     kubernetes:
+#       remoteNamespace: default # Source namespace if not clusterIssuer
+#        # Optional: restrict access to specific namespaces if cluster wide true
+#       # List of allowed namespaces (only used when clusterWide: true)
+#       allowedNamespaces:
+#         - portfolio
+#         - todo-go-htmx
+#         - workinghours
+#       # List of allowed secret names
+#       allowedSecrets:
+#         - portfolio-secret
+#         - todo-go-htmx-secret
+#         - workinghours-secret
+#       auth:
+#         serviceAccount:
+#           create: true
+#           name: "my-secret-store-sa"
+#           annotations: {}  # Specific annotations for ServiceAccount
+#   labels:
+#     environment: prod
+#   annotations:
+#     description: "Kubernetes secrets store"
+#
+## Vault
 # secretStore:
 #   clusterWide: false
 #   provider:
@@ -34,6 +69,7 @@ secretStore:
 #   annotations:
 #     description: "HashiCorp Vault store"
 
+## AWS
 # secretStore:
 #   clusterWide: true
 #   provider:
