@@ -1,0 +1,49 @@
+nameOverride: ""
+fullnameOverride: ""
+
+secretStore:
+  clusterWide: true
+  provider:
+    type: kubernetes
+    kubernetes:
+      remoteNamespace: default # Source namespace
+       # Optional: restrict access to specific namespaces if cluster wide true
+      allowedNamespaces: []  # e.g., ["production", "staging"]
+      auth:
+        serviceAccount:
+          create: true
+          name: "my-secret-store-sa"
+          annotations: {}  # Specific annotations for ServiceAccount
+  labels:
+    environment: prod
+  annotations:
+    description: "Kubernetes secrets store"
+
+# secretStore:
+#   clusterWide: false
+#   provider:
+#     type: vault
+#     vault:
+#       server: "https://vault.example.com:8200"
+#       path: "secret/data"
+#       auth:
+#         secretName: vault-token-secret
+#   labels:
+#     environment: prod
+#     type: vault
+#   annotations:
+#     description: "HashiCorp Vault store"
+
+# secretStore:
+#   clusterWide: true
+#   provider:
+#     type: aws
+#     aws:
+#       region: us-west-2
+#       auth:
+#         secretName: aws-secret-creds  # Secret containing AWS credentials
+#   labels:
+#     environment: prod
+#     cloud: aws
+#   annotations:
+#     description: "AWS Secrets Manager store"
