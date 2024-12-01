@@ -36,9 +36,8 @@ Minio Tenant Helm chart configurated by Ujstor
 | minio-tenant.ingress.console.tls[0].hosts[0] | string | `"minio-console.domain.com"` |  |
 | minio-tenant.ingress.console.tls[0].secretName | string | `"minio-console-tls"` |  |
 | minio-tenant.tenant.buckets | list | `[]` |  |
-| minio-tenant.tenant.configSecret.existingSecret | bool | `false` |  |
 | minio-tenant.tenant.configuration.name | string | `"minio-admin-secret"` |  |
-| minio-tenant.tenant.name | string | `"myminio"` |  |
+| minio-tenant.tenant.name | string | `"minio"` |  |
 | minio-tenant.tenant.pools[0].name | string | `"pool-0"` |  |
 | minio-tenant.tenant.pools[0].servers | int | `1` |  |
 | minio-tenant.tenant.pools[0].size | string | `"10Gi"` |  |

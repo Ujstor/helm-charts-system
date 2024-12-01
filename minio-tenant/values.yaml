@@ -1,10 +1,8 @@
 minio-tenant:
   tenant:
-    name: myminio
+    name: minio
     configuration:
       name: minio-admin-secret
-    configSecret:
-      existingSecret: false
     pools:
       - servers: 1
         name: pool-0
