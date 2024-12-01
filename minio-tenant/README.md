@@ -8,7 +8,7 @@ Minio Tenant Helm chart configurated by Ujstor
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://operator.min.io | tenant | 6.0.4 |
+| https://operator.min.io | minio-tenant(tenant) | 6.0.4 |
 
 ## Values
 

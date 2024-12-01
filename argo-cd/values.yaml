@@ -1,3 +1,15 @@
 argo:
   global:
-    domain:
+    domain: argocd.domain.com
+  server:
+    ingress:
+      enabled: false
+      ingressClassName: nginx
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt"
+        nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+        nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      extraTls:
+        - hosts:
+          - argocd.domain.com
+          secretName: argocd-ingress-tls

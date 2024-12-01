@@ -8,7 +8,7 @@ Minio Operator Helm chart configurated by Ujstor
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://operator.min.io | operator | 6.0.4 |
+| https://operator.min.io | minio-operator(operator) | 6.0.4 |
 
 ## Values
 

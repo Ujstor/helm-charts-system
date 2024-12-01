@@ -18,7 +18,14 @@ Argo Helm chart configured by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| argo.global.domain | string | `nil` |  |
+| argo.global.domain | string | `"argocd.domain.com"` |  |
+| argo.server.ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
+| argo.server.ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |
+| argo.server.ingress.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
+| argo.server.ingress.enabled | bool | `false` |  |
+| argo.server.ingress.extraTls[0].hosts[0] | string | `"argocd.domain.com"` |  |
+| argo.server.ingress.extraTls[0].secretName | string | `"argocd-ingress-tls"` |  |
+| argo.server.ingress.ingressClassName | string | `"nginx"` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
@@ -226,7 +233,7 @@ Minio Operator Helm chart configurated by Ujstor
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://operator.min.io | operator | 6.0.4 |
+| https://operator.min.io | minio-operator(operator) | 6.0.4 |
 
 ## Values
 
@@ -250,7 +257,7 @@ Minio Tenant Helm chart configurated by Ujstor
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://operator.min.io | tenant | 6.0.4 |
+| https://operator.min.io | minio-tenant(tenant) | 6.0.4 |
 
 ## Values
 

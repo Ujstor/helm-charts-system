@@ -9,3 +9,4 @@ dependencies:
 - name: operator
   version: 6.0.4
   repository: https://operator.min.io
+  alias: minio-operator
