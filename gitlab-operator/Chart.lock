@@ -1,0 +1,6 @@
+dependencies:
+- name: gitlab-operator
+  repository: https://charts.gitlab.io
+  version: 1.7.1
+digest: sha256:4f9d9c7b4c73b4fad85ff9b9874efc316f8b21f5a8f9506cb38147db447f884e
+generated: "2024-12-01T12:44:38.307072968+01:00"

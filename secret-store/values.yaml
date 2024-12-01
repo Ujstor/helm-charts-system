@@ -1,6 +1,6 @@
 # # Kubernets
 # secretStore:
-#   clusterWide: false
+#   clusterWide: true
 #   provider:
 #     type: kubernetes
 #     kubernetes:

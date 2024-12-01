@@ -1,0 +1,9 @@
+gitlab-operator:
+  watchCluster: false
+  resources:
+    limits:
+      cpu: 200m
+      memory: 300Mi
+    requests:
+      cpu: 200m
+      memory: 100Mi

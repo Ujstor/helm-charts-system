@@ -1,5 +1,21 @@
 vault:
-  dataStorage:
-    size: 2Gi
   ui:
     enabled: true
+  server:
+    dataStorage:
+      size: 2Gi
+    ingress:
+      enabled: false
+      ingressClassName: "nginx"
+      annotations:
+        cert-manager.io/cluster-issuer: "letsencrypt"
+        nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+        nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+      hosts:
+        - host: vault.domain.com
+          paths:
+            - /
+      tls:
+        - secretName: vault-tls
+          hosts:
+            - vault.domain.com

@@ -14,6 +14,15 @@ Vault Helm chart configured by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| vault.dataStorage.size | string | `"2Gi"` |  |
+| vault.server.dataStorage.size | string | `"2Gi"` |  |
+| vault.server.ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
+| vault.server.ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
+| vault.server.ingress.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
+| vault.server.ingress.enabled | bool | `false` |  |
+| vault.server.ingress.hosts[0].host | string | `"vault.domain.com"` |  |
+| vault.server.ingress.hosts[0].paths[0] | string | `"/"` |  |
+| vault.server.ingress.ingressClassName | string | `"nginx"` |  |
+| vault.server.ingress.tls[0].hosts[0] | string | `"vault.domain.com"` |  |
+| vault.server.ingress.tls[0].secretName | string | `"vault-tls"` |  |
 | vault.ui.enabled | bool | `true` |  |
 

@@ -1,0 +1,8 @@
+minio-operator:
+  operator:
+    replicaCount: 1
+  resources:
+    requests:
+      cpu: 200m
+      memory: 256Mi
+      ephemeral-storage: 500Mi

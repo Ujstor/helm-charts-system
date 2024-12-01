@@ -176,6 +176,31 @@ External-Secrets Helm chart configured by Ujstor
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
 
+# gitlab-operator
+
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.7.1](https://img.shields.io/badge/AppVersion-1.7.1-informational?style=flat-square)
+
+Gitlab Operator Helm chart configurated by Ujstor
+
+## Requirements
+
+| Repository | Name | Version |
+|------------|------|---------|
+| https://charts.gitlab.io | gitlab-operator | 1.7.1 |
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| gitlab-operator.resources.limits.cpu | string | `"200m"` |  |
+| gitlab-operator.resources.limits.memory | string | `"300Mi"` |  |
+| gitlab-operator.resources.requests.cpu | string | `"200m"` |  |
+| gitlab-operator.resources.requests.memory | string | `"100Mi"` |  |
+| gitlab-operator.watchCluster | bool | `false` |  |
+
+
+![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
+
 # ingress-nginx
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.11.3](https://img.shields.io/badge/AppVersion-1.11.3-informational?style=flat-square)
@@ -187,6 +212,75 @@ Nginx Helm chart
 | Repository | Name | Version |
 |------------|------|---------|
 | https://kubernetes.github.io/ingress-nginx | nginx(ingress-nginx) | 4.11.3 |
+
+
+![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
+
+# minio-operator
+
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v6.0.4](https://img.shields.io/badge/AppVersion-v6.0.4-informational?style=flat-square)
+
+Minio Operator Helm chart configurated by Ujstor
+
+## Requirements
+
+| Repository | Name | Version |
+|------------|------|---------|
+| https://operator.min.io | operator | 6.0.4 |
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| minio-operator.operator.replicaCount | int | `1` |  |
+| minio-operator.resources.requests.cpu | string | `"200m"` |  |
+| minio-operator.resources.requests.ephemeral-storage | string | `"500Mi"` |  |
+| minio-operator.resources.requests.memory | string | `"256Mi"` |  |
+
+
+![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
+
+# minio-tenant
+
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v6.0.4](https://img.shields.io/badge/AppVersion-v6.0.4-informational?style=flat-square)
+
+Minio Tenant Helm chart configurated by Ujstor
+
+## Requirements
+
+| Repository | Name | Version |
+|------------|------|---------|
+| https://operator.min.io | tenant | 6.0.4 |
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| minio-tenant.ingress.api.annotations | object | `{}` |  |
+| minio-tenant.ingress.api.enabled | bool | `false` |  |
+| minio-tenant.ingress.api.host | string | `"minio.local"` |  |
+| minio-tenant.ingress.api.ingressClassName | string | `""` |  |
+| minio-tenant.ingress.api.labels | object | `{}` |  |
+| minio-tenant.ingress.api.path | string | `"/"` |  |
+| minio-tenant.ingress.api.pathType | string | `"Prefix"` |  |
+| minio-tenant.ingress.api.tls | list | `[]` |  |
+| minio-tenant.ingress.console.annotations | object | `{}` |  |
+| minio-tenant.ingress.console.enabled | bool | `false` |  |
+| minio-tenant.ingress.console.host | string | `"minio-console.local"` |  |
+| minio-tenant.ingress.console.ingressClassName | string | `""` |  |
+| minio-tenant.ingress.console.labels | object | `{}` |  |
+| minio-tenant.ingress.console.path | string | `"/"` |  |
+| minio-tenant.ingress.console.pathType | string | `"Prefix"` |  |
+| minio-tenant.ingress.console.tls | list | `[]` |  |
+| minio-tenant.tenant.configSecret.accessKey | string | `"minio"` |  |
+| minio-tenant.tenant.configSecret.name | string | `"myminio-env-configuration"` |  |
+| minio-tenant.tenant.configSecret.secretKey | string | `"minio123"` |  |
+| minio-tenant.tenant.configuration.name | string | `"myminio-env-configuration"` |  |
+| minio-tenant.tenant.name | string | `"myminio"` |  |
+| minio-tenant.tenant.pools[0].name | string | `"pool-0"` |  |
+| minio-tenant.tenant.pools[0].servers | int | `1` |  |
+| minio-tenant.tenant.pools[0].size | string | `"10Gi"` |  |
+| minio-tenant.tenant.pools[0].volumesPerServer | int | `2` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
@@ -318,7 +412,16 @@ Vault Helm chart configured by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| vault.dataStorage.size | string | `"2Gi"` |  |
+| vault.server.dataStorage.size | string | `"2Gi"` |  |
+| vault.server.ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
+| vault.server.ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTP"` |  |
+| vault.server.ingress.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
+| vault.server.ingress.enabled | bool | `false` |  |
+| vault.server.ingress.hosts[0].host | string | `"vault.domain.com"` |  |
+| vault.server.ingress.hosts[0].paths[0] | string | `"/"` |  |
+| vault.server.ingress.ingressClassName | string | `"nginx"` |  |
+| vault.server.ingress.tls[0].hosts[0] | string | `"vault.domain.com"` |  |
+| vault.server.ingress.tls[0].secretName | string | `"vault-tls"` |  |
 | vault.ui.enabled | bool | `true` |  |
 
 
