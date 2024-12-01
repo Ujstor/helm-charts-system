@@ -10,3 +10,6 @@ dependencies:
   version: 6.0.4
   repository: https://operator.min.io
   alias: minio-tenant
+- name: secret-store
+  version: 1.0.0
+  repository: "https://ujstor.github.io/helm-charts-system"

@@ -2,5 +2,8 @@ dependencies:
 - name: tenant
   repository: https://operator.min.io
   version: 6.0.4
-digest: sha256:9c7b151a2667d899a065621a2269fed10aeea7f2d659e417c2d2db245ab1393f
-generated: "2024-12-01T14:13:56.604026353+01:00"
+- name: secret-store
+  repository: https://ujstor.github.io/helm-charts-system
+  version: 1.0.0
+digest: sha256:860ce08e90f24d37dfb61fca5a44afbb0f8728b70cc6d70d5c6dee49952dd567
+generated: "2024-12-01T16:15:06.270950661+01:00"
