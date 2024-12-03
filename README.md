@@ -199,11 +199,11 @@ Gitlab Operator Helm chart configurated by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| gitlab-operator.resources.limits.cpu | string | `"200m"` |  |
-| gitlab-operator.resources.limits.memory | string | `"300Mi"` |  |
-| gitlab-operator.resources.requests.cpu | string | `"200m"` |  |
+| gitlab-operator.resources.limits.cpu | string | `"500m"` |  |
+| gitlab-operator.resources.limits.memory | string | `"512Mi"` |  |
+| gitlab-operator.resources.requests.cpu | string | `"100m"` |  |
 | gitlab-operator.resources.requests.memory | string | `"100Mi"` |  |
-| gitlab-operator.watchCluster | bool | `false` |  |
+| gitlab-operator.watchCluster | bool | `true` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
