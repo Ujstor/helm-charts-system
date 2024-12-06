@@ -14,28 +14,15 @@ Cilium Helm chart configured by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| cilium.autoDirectNodeRoutes | bool | `false` |  |
-| cilium.bandwidthManager.enabled | bool | `true` |  |
 | cilium.bpf.masquerade | bool | `true` |  |
-| cilium.enableIPMasqAgent | bool | `false` |  |
-| cilium.enableIPv4Masquerade | bool | `true` |  |
 | cilium.encryption.enabled | bool | `true` |  |
-| cilium.encryption.type | string | `"ipsec"` |  |
+| cilium.encryption.type | string | `"wireguard"` |  |
 | cilium.envoy.enabled | bool | `false` |  |
-| cilium.hostServices.enabled | bool | `true` |  |
 | cilium.ipam.mode | string | `"cluster-pool"` |  |
-| cilium.ipam.operator.clusterPoolIPv4PodCIDRList | string | `"10.250.0.0/16"` |  |
-| cilium.ipv4.enabled | bool | `true` |  |
-| cilium.ipv4NativeRoutingCIDR | string | `"10.250.0.0/16"` |  |
-| cilium.ipv6.enabled | bool | `false` |  |
+| cilium.ipam.operator.clusterPoolIPv4PodCIDRList | string | `"10.255.0.0/16"` |  |
+| cilium.ipv4NativeRoutingCIDR | string | `"10.255.0.0/16"` |  |
 | cilium.k8sServiceHost | string | `nil` |  |
 | cilium.k8sServicePort | int | `6443` |  |
 | cilium.kubeProxyReplacement | bool | `true` |  |
-| cilium.loadBalancer.acceleration | string | `"native"` |  |
-| cilium.loadBalancer.algorithm | string | `"maglev"` |  |
-| cilium.loadBalancer.mode | string | `"snat"` |  |
-| cilium.nodeinit.enabled | bool | `true` |  |
-| cilium.nodeinit.reconfigureKubelet | bool | `true` |  |
-| cilium.nodeinit.removeCbrBridge | bool | `true` |  |
 | cilium.sessionAffinity | bool | `true` |  |
 

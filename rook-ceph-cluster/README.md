@@ -44,27 +44,6 @@ Rook Ceph Cluster Helm Chart
 | cephFileSystems[0].storageClass.enabled | bool | `true` |  |
 | cephFileSystems[0].storageClass.isDefault | bool | `false` |  |
 | cephFileSystems[0].storageClass.name | string | `"ceph-filesystem"` |  |
-| cephObjectStores[0].ingress.enabled | bool | `false` |  |
-| cephObjectStores[0].name | string | `"ceph-objectstore"` |  |
-| cephObjectStores[0].spec.dataPool.erasureCoded.codingChunks | int | `1` |  |
-| cephObjectStores[0].spec.dataPool.erasureCoded.dataChunks | int | `2` |  |
-| cephObjectStores[0].spec.dataPool.failureDomain | string | `"host"` |  |
-| cephObjectStores[0].spec.gateway.instances | int | `1` |  |
-| cephObjectStores[0].spec.gateway.port | int | `80` |  |
-| cephObjectStores[0].spec.gateway.priorityClassName | string | `"system-cluster-critical"` |  |
-| cephObjectStores[0].spec.gateway.resources.limits.memory | string | `"2Gi"` |  |
-| cephObjectStores[0].spec.gateway.resources.requests.cpu | string | `"1000m"` |  |
-| cephObjectStores[0].spec.gateway.resources.requests.memory | string | `"1Gi"` |  |
-| cephObjectStores[0].spec.metadataPool.failureDomain | string | `"host"` |  |
-| cephObjectStores[0].spec.metadataPool.replicated.size | int | `3` |  |
-| cephObjectStores[0].spec.preservePoolsOnDelete | bool | `true` |  |
-| cephObjectStores[0].storageClass.annotations | object | `{}` |  |
-| cephObjectStores[0].storageClass.enabled | bool | `true` |  |
-| cephObjectStores[0].storageClass.labels | object | `{}` |  |
-| cephObjectStores[0].storageClass.name | string | `"ceph-bucket"` |  |
-| cephObjectStores[0].storageClass.parameters.region | string | `"us-east-1"` |  |
-| cephObjectStores[0].storageClass.reclaimPolicy | string | `"Delete"` |  |
-| cephObjectStores[0].storageClass.volumeBindingMode | string | `"Immediate"` |  |
 | ingress.dashboard | object | `{}` |  |
 | toolbox.enabled | bool | `true` |  |
 

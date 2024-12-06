@@ -3,14 +3,14 @@ entries:
   argo-cd:
   - apiVersion: v2
     appVersion: v2.13.0
-    created: "2024-12-04T00:24:09.663790925+01:00"
+    created: "2024-12-06T20:35:24.490560896+01:00"
     dependencies:
     - alias: argo
       name: argo-cd
       repository: https://argoproj.github.io/argo-helm
       version: 7.7.3
     description: Argo Helm chart configured by Ujstor
-    digest: 32ed56ea12404fa59ddbc96b2e148541fab1b60cfda1ef36af0849cdce08dcbc
+    digest: 0501c6c67899779c47aeee509f4d008c3617767f166e89eeb5aa8f4b3ae22146
     name: argo-cd
     type: application
     urls:
@@ -19,14 +19,14 @@ entries:
   cert-manager:
   - apiVersion: v2
     appVersion: 1.16.1
-    created: "2024-12-04T00:24:09.667122334+01:00"
+    created: "2024-12-06T20:35:24.49398635+01:00"
     dependencies:
     - alias: cert-manager
       name: cert-manager
       repository: https://charts.jetstack.io
       version: 1.16.1
     description: A Cert-Manager Helm chart config by Ujstor
-    digest: 828028b28667d4d8be8aef2be209c08e200ed57149d56a835b4e1db7c4397d10
+    digest: 30ecda6f29657f267402f09fcffb3867913e23b1dfe48ea907592df32e49a708
     name: cert-manager
     type: application
     urls:
@@ -35,14 +35,14 @@ entries:
   cilium:
   - apiVersion: v2
     appVersion: 1.16.3
-    created: "2024-12-04T00:24:09.675045575+01:00"
+    created: "2024-12-06T20:35:24.502381806+01:00"
     dependencies:
     - alias: cilium
       name: cilium
       repository: https://helm.cilium.io/
       version: 1.16.3
     description: Cilium Helm chart configured by Ujstor
-    digest: 36515e818a2525115e134039ed69199c637b4324798ac0038f30d86cefa96afd
+    digest: f48847c3c725d1d8f4ab8bb7360c07816d74957f0b23a4c3dda75a4bc4386206
     name: cilium
     type: application
     urls:
@@ -51,9 +51,9 @@ entries:
   cluster-issuer:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2024-12-04T00:24:09.675213078+01:00"
+    created: "2024-12-06T20:35:24.502521448+01:00"
     description: A Cert-Manager ClusterIssuer Helm chart config by Ujstor
-    digest: 16e092b8f89a573fe5e159a2ea1a8ded67440febdd8f9b571ce49c9fbd3b7a77
+    digest: 95b50ab258b394d1f1eb9b4328c38499bb3c87ec8354af1acc7f3970c269b8a5
     name: cluster-issuer
     type: application
     urls:
@@ -62,13 +62,13 @@ entries:
   external-secrets:
   - apiVersion: v2
     appVersion: v0.10.5
-    created: "2024-12-04T00:24:09.677745129+01:00"
+    created: "2024-12-06T20:35:24.505532777+01:00"
     dependencies:
     - name: external-secrets
       repository: https://charts.external-secrets.io
       version: 0.10.5
     description: External-Secrets Helm chart configured by Ujstor
-    digest: d22bff842eee104cdc6e1842bec3fe5f10e98fa8cb888ec1e6e4fe2c5bbafee5
+    digest: 1596a37a8037e4a9e5e3ffebf2f5cc904054c3bb780fe4f854328e1251f33907
     name: external-secrets
     type: application
     urls:
@@ -77,13 +77,13 @@ entries:
   gitlab-operator:
   - apiVersion: v2
     appVersion: 1.7.1
-    created: "2024-12-04T00:24:09.682042397+01:00"
+    created: "2024-12-06T20:35:24.510522076+01:00"
     dependencies:
     - name: gitlab-operator
       repository: https://charts.gitlab.io
       version: 1.7.1
     description: Gitlab Operator Helm chart configurated by Ujstor
-    digest: 055dc627612c01e7d426bfe5d7da8f500ebddfda545a7f4b9670106827c67c8f
+    digest: 231324975261bc6abe69fa627641c7f8d5e2bf33d9781a7b816d672944f3ca99
     name: gitlab-operator
     type: application
     urls:
@@ -92,13 +92,13 @@ entries:
   hashicorp-vault:
   - apiVersion: v2
     appVersion: 1.18.1
-    created: "2024-12-04T00:24:09.684535458+01:00"
+    created: "2024-12-06T20:35:24.513357451+01:00"
     dependencies:
     - name: vault
       repository: https://helm.releases.hashicorp.com
       version: 0.29.0
     description: Vault Helm chart configured by Ujstor
-    digest: 5bedc90a13f55c1822b8334ed8a057358be1c8450684fd9a22a0c53cf130b11e
+    digest: affc0156e2b60cea16480a232866e87e5fabe6d74af6e8ddc26975f7262af844
     name: hashicorp-vault
     type: application
     urls:
@@ -107,14 +107,14 @@ entries:
   ingress-nginx:
   - apiVersion: v2
     appVersion: 1.11.3
-    created: "2024-12-04T00:24:09.687785663+01:00"
+    created: "2024-12-06T20:35:24.517393967+01:00"
     dependencies:
     - alias: nginx
       name: ingress-nginx
       repository: https://kubernetes.github.io/ingress-nginx
       version: 4.11.3
     description: Nginx Helm chart
-    digest: 29acf05962c7f624c39cbdc7c74d7ce29781ffc6870b24a3dba995974cc551b7
+    digest: a135d985206050f9b721f6e605d6dde6f586dce853971e0761bb6445ad5d6b23
     name: ingress-nginx
     type: application
     urls:
@@ -123,14 +123,14 @@ entries:
   minio-operator:
   - apiVersion: v2
     appVersion: v6.0.4
-    created: "2024-12-04T00:24:09.68860812+01:00"
+    created: "2024-12-06T20:35:24.518536375+01:00"
     dependencies:
     - alias: minio-operator
       name: operator
       repository: https://operator.min.io
       version: 6.0.4
     description: Minio Operator Helm chart configurated by Ujstor
-    digest: e65430fb501c8c75d7840b86ca2c84288316a7682e77caf9dcdca48abe3ca981
+    digest: b429d80ad87bc70020b48db2acd52cad33df06ee25cb58d54591bbb8b24facb8
     name: minio-operator
     type: application
     urls:
@@ -139,7 +139,7 @@ entries:
   minio-tenant:
   - apiVersion: v2
     appVersion: v6.0.4
-    created: "2024-12-04T00:24:09.689422027+01:00"
+    created: "2024-12-06T20:35:24.51953832+01:00"
     dependencies:
     - alias: minio-tenant
       name: tenant
@@ -149,7 +149,7 @@ entries:
       repository: https://ujstor.github.io/helm-charts-system
       version: 1.0.0
     description: Minio Tenant Helm chart configurated by Ujstor
-    digest: 012cade4f04ec64e216f4400decf9a7337589c673d5deaa88e3b49e704dec009
+    digest: ff3ee49f0a73495ef84dc342f49a7e2e0346906bb2aa1c11a06ec60292b790b4
     name: minio-tenant
     type: application
     urls:
@@ -158,9 +158,9 @@ entries:
   postgres-cluster:
   - apiVersion: v2
     appVersion: 5.6.0
-    created: "2024-12-04T00:24:09.689672492+01:00"
+    created: "2024-12-06T20:35:24.519848885+01:00"
     description: A PGO Cluster Helm chart for Kubernetes
-    digest: 3ef389107936a4ef1a5f01f41c74c63962ada928973280537e0744ab8c807271
+    digest: 573872d01ebe01e8aa2ce417eb56398199d35408d00a100d877a74d372f3deb9
     name: postgres-cluster
     type: application
     urls:
@@ -169,10 +169,10 @@ entries:
   postgres-operator:
   - apiVersion: v2
     appVersion: 5.7.0
-    created: "2024-12-04T00:24:09.692862557+01:00"
+    created: "2024-12-06T20:35:24.524012302+01:00"
     description: Installer for PGO, the open source Postgres Operator from Crunchy
       Data
-    digest: 00d5d8fe8f1551ca12b018538a3412198349d01709f18e8eaca3a8c52feb6df1
+    digest: d768f86a78991408ef0d6ab5405fed05f05dd04cf7de51135da351f829b41c03
     name: postgres-operator
     type: application
     urls:
@@ -181,13 +181,13 @@ entries:
   rook-ceph-cluster:
   - apiVersion: v2
     appVersion: 1.15.5
-    created: "2024-12-04T00:24:09.694407758+01:00"
+    created: "2024-12-06T20:35:24.526264828+01:00"
     dependencies:
     - name: rook-ceph-cluster
       repository: https://charts.rook.io/release
       version: 1.15.5
     description: Rook Ceph Cluster Helm Chart
-    digest: 89c84f33fa9a708ddeb57567e72a552025f165f8536c37886b3751fceb1644b4
+    digest: 408d6f6c04cac2494794510f984e02bb65d9d7eb4071ed43d990b7295aa5a233
     name: rook-ceph-cluster
     type: application
     urls:
@@ -196,13 +196,13 @@ entries:
   rook-ceph-operator:
   - apiVersion: v2
     appVersion: 1.15.5
-    created: "2024-12-04T00:24:09.696582303+01:00"
+    created: "2024-12-06T20:35:24.530178502+01:00"
     dependencies:
     - name: rook-ceph
       repository: https://charts.rook.io/release
       version: 1.15.5
     description: Rook Ceph Operator Helm Chart
-    digest: 90b3e84d37a7375394c0183bd79897a3e80f87ca04e9bf30e06f7e587ecb4434
+    digest: a62ef039bd14aac1f09ccbe6801508583d32bc59f8318fc88c0c9b919d27f995
     name: rook-ceph-operator
     type: application
     urls:
@@ -211,12 +211,12 @@ entries:
   secret-store:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2024-12-04T00:24:09.696714775+01:00"
+    created: "2024-12-06T20:35:24.530415505+01:00"
     description: A Helm chart for configuring External Secrets SecretStore
-    digest: 080b3ac7dec544c7ac10e23d52cdff22c57e9dbeec8c59c1bd6b02d4697fbefa
+    digest: 22763fdd1ba36ccc86de075a81d6220910401e695ced42fd99ca9b1454688509
     name: secret-store
     type: application
     urls:
     - https://Ujstor.github.io/helm-charts-system/secret-store-1.0.0.tgz
     version: 1.0.0
-generated: "2024-12-04T00:24:09.655876884+01:00"
+generated: "2024-12-06T20:35:24.481385608+01:00"

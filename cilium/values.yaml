@@ -7,37 +7,14 @@ cilium:
   ipam:
     mode: "cluster-pool"
     operator:
-      clusterPoolIPv4PodCIDRList: 10.250.0.0/16
-  ipv4:
-    enabled: true
-  ipv6:
-    enabled: false
-
-  autoDirectNodeRoutes: false
-  enableIPMasqAgent: false
-  enableIPv4Masquerade: true
+      clusterPoolIPv4PodCIDRList: 10.255.0.0/16
   bpf:
     masquerade: true
-
-  loadBalancer:
-    algorithm: "maglev"
-    mode: "snat"
-    acceleration: "native"
-  ipv4NativeRoutingCIDR: "10.250.0.0/16"
-
-  hostServices:
-    enabled: true
-  bandwidthManager:
-    enabled: true
-
-  nodeinit:
-    enabled: true
-    reconfigureKubelet: true
-    removeCbrBridge: true
+  ipv4NativeRoutingCIDR: "10.255.0.0/16"
 
   encryption:
     enabled: true
-    type: "ipsec"
+    type: "wireguard"
 
   envoy:
     enabled: false
