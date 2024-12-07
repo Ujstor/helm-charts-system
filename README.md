@@ -210,6 +210,41 @@ Nginx Helm chart
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
 
+# metallb-config
+
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.14.8](https://img.shields.io/badge/AppVersion-0.14.8-informational?style=flat-square)
+
+A Helm chart for Kubernetes
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| bgpAdvertisement.aggregationLength | int | `29` |  |
+| bgpAdvertisement.communities[0] | string | `"65535:65282"` |  |
+| bgpAdvertisement.enabled | bool | `false` |  |
+| bgpAdvertisement.localPref | int | `100` |  |
+| ipAddressPool.addresses | list | `[]` |  |
+| l2Advertisement.enabled | bool | `false` |  |
+
+
+![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
+
+# metallb-operator
+
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.14.8](https://img.shields.io/badge/AppVersion-0.14.8-informational?style=flat-square)
+
+MetalLB Operator Helm Chart
+
+## Requirements
+
+| Repository | Name | Version |
+|------------|------|---------|
+| https://metallb.github.io/metallb | metallb | 0.14.8 |
+
+
+![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
+
 # minio-operator
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v6.0.4](https://img.shields.io/badge/AppVersion-v6.0.4-informational?style=flat-square)

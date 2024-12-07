@@ -1,0 +1,22 @@
+{{- if  .Values.bgpAdvertisement.enabled }}
+apiVersion: metallb.io/v1beta1
+kind: BGPAdvertisement
+metadata:
+  name: {{ include "metallb-config.fullname" . }}-bgp
+  namespace: {{ .Release.Namespace }}
+spec:
+  ipAddressPools:
+  - {{ include "metallb-config.fullname" . }}
+  {{- if .Values.bgpAdvertisement.aggregationLength }}
+  aggregationLength: {{ .Values.bgpAdvertisement.aggregationLength }}
+  {{- end }}
+  {{- if .Values.bgpAdvertisement.localPref }}
+  localPref: {{ .Values.bgpAdvertisement.localPref }}
+  {{- end }}
+  {{- if .Values.bgpAdvertisement.communities }}
+  communities:
+  {{- range .Values.bgpAdvertisement.communities }}
+    - {{ . }}
+  {{- end }}
+  {{- end }}
+{{- end }}

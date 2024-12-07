@@ -1,0 +1,11 @@
+apiVersion: v2
+name: metallb-operator
+description: MetalLB Operator Helm Chart
+type: application
+version: 1.0.0
+appVersion: "0.14.8"
+
+dependencies:
+- name: metallb
+  version: 0.14.8
+  repository: https://metallb.github.io/metallb

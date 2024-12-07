@@ -1,0 +1,12 @@
+ipAddressPool:
+  addresses: []
+
+l2Advertisement:
+  enabled: false
+
+bgpAdvertisement:
+  enabled: false
+  aggregationLength: 29  # Optional: aggregate routes
+  localPref: 100        # Optional: BGP local preference
+  communities:          # Optional: BGP communities
+    - "65535:65282"     # Example community
