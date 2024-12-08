@@ -207,6 +207,12 @@ Nginx Helm chart
 |------------|------|---------|
 | https://kubernetes.github.io/ingress-nginx | nginx(ingress-nginx) | 4.11.3 |
 
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| nginx.controller.allowSnippetAnnotations | bool | `true` |  |
+
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
 

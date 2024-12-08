@@ -10,3 +10,9 @@ Nginx Helm chart
 |------------|------|---------|
 | https://kubernetes.github.io/ingress-nginx | nginx(ingress-nginx) | 4.11.3 |
 
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| nginx.controller.allowSnippetAnnotations | bool | `true` |  |
+
