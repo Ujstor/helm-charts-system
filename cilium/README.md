@@ -19,7 +19,7 @@ Cilium Helm chart configured by Ujstor
 | cilium.encryption.type | string | `"wireguard"` |  |
 | cilium.envoy.enabled | bool | `false` |  |
 | cilium.ipam.mode | string | `"cluster-pool"` |  |
-| cilium.ipam.operator.clusterPoolIPv4PodCIDRList | string | `"10.255.0.0/16"` |  |
+| cilium.ipam.operator.clusterPoolIPv4PodCIDRList[0] | string | `"10.255.0.0/16"` |  |
 | cilium.ipv4NativeRoutingCIDR | string | `"10.255.0.0/16"` |  |
 | cilium.k8sServiceHost | string | `nil` |  |
 | cilium.k8sServicePort | int | `6443` |  |

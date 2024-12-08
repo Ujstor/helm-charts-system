@@ -72,7 +72,7 @@ Cilium Helm chart configured by Ujstor
 | cilium.encryption.type | string | `"wireguard"` |  |
 | cilium.envoy.enabled | bool | `false` |  |
 | cilium.ipam.mode | string | `"cluster-pool"` |  |
-| cilium.ipam.operator.clusterPoolIPv4PodCIDRList | string | `"10.255.0.0/16"` |  |
+| cilium.ipam.operator.clusterPoolIPv4PodCIDRList[0] | string | `"10.255.0.0/16"` |  |
 | cilium.ipv4NativeRoutingCIDR | string | `"10.255.0.0/16"` |  |
 | cilium.k8sServiceHost | string | `nil` |  |
 | cilium.k8sServicePort | int | `6443` |  |
@@ -214,7 +214,7 @@ Nginx Helm chart
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.14.8](https://img.shields.io/badge/AppVersion-0.14.8-informational?style=flat-square)
 
-A Helm chart for Kubernetes
+MetalLB config Helm chart configured by Ujstor
 
 ## Values
 

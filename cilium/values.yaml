@@ -7,7 +7,7 @@ cilium:
   ipam:
     mode: "cluster-pool"
     operator:
-      clusterPoolIPv4PodCIDRList: 10.255.0.0/16
+      clusterPoolIPv4PodCIDRList: ["10.255.0.0/16"]
   bpf:
     masquerade: true
   ipv4NativeRoutingCIDR: "10.255.0.0/16"

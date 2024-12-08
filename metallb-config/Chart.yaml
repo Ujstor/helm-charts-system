@@ -1,6 +1,6 @@
 apiVersion: v2
 name: metallb-config
-description: A Helm chart for Kubernetes
+description: MetalLB config Helm chart configured by Ujstor
 type: application
 version: 1.0.0
 appVersion: "0.14.8"
