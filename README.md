@@ -18,6 +18,7 @@ Argo Helm chart configured by Ujstor
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
+| argo.configs.cm."resource.exclusions" | string | `"- apiGroups: [\"cilium.io\"]\n  kinds: [\"CiliumIdentity\"]\n  clusters: [\"*\"]\n"` |  |
 | argo.global.domain | string | `"argocd.domain.com"` |  |
 | argo.server.ingress.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | argo.server.ingress.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |

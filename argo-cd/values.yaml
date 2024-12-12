@@ -13,3 +13,9 @@ argo:
         - hosts:
           - argocd.domain.com
           secretName: argocd-ingress-tls
+  configs:
+    cm:
+      resource.exclusions: |
+        - apiGroups: ["cilium.io"]
+          kinds: ["CiliumIdentity"]
+          clusters: ["*"]
