@@ -87,49 +87,49 @@ cephFileSystems:
       isDefault: false
       name: ceph-filesystem
 
- cephObjectStores:
-   - name: ceph-objectstore
-     spec:
-       metadataPool:
-         failureDomain: host
-         replicated:
-           size: 3
-       dataPool:
-         failureDomain: host
-         erasureCoded:
-           dataChunks: 2
-           codingChunks: 1
-       preservePoolsOnDelete: true
-       gateway:
-         port: 80
-         resources:
-           limits:
-             memory: "2Gi"
-           requests:
-             cpu: "1000m"
-             memory: "1Gi"
-         # securePort: 443
-         # sslCertificateRef:
-         instances: 1
-         priorityClassName: system-cluster-critical
-     storageClass:
-       enabled: false
-       name: ceph-bucket
-       reclaimPolicy: Delete
-       volumeBindingMode: "Immediate"
-       annotations: {}
-       labels: {}
-       parameters:
-         region: us-east-1
-     ingress:
-       # Enable an ingress for the ceph-objectstore
-       enabled: false
-       # annotations: {}
-       # host:
-       #   name: objectstore.example.com
-       #   path: /
-       # tls:
-       # - hosts:
-       #     - objectstore.example.com
-       #   secretName: ceph-objectstore-tls
-       # ingressClassName: nginx
+cephObjectStores:
+ - name: ceph-objectstore
+   spec:
+     metadataPool:
+       failureDomain: host
+       replicated:
+         size: 3
+     dataPool:
+       failureDomain: host
+       erasureCoded:
+         dataChunks: 2
+         codingChunks: 1
+     preservePoolsOnDelete: true
+     gateway:
+       port: 80
+       resources:
+         limits:
+           memory: "2Gi"
+         requests:
+           cpu: "1000m"
+           memory: "1Gi"
+       # securePort: 443
+       # sslCertificateRef:
+       instances: 1
+       priorityClassName: system-cluster-critical
+   storageClass:
+     enabled: false
+     name: ceph-bucket
+     reclaimPolicy: Delete
+     volumeBindingMode: "Immediate"
+     annotations: {}
+     labels: {}
+     parameters:
+       region: us-east-1
+   ingress:
+     # Enable an ingress for the ceph-objectstore
+     enabled: false
+     # annotations: {}
+     # host:
+     #   name: objectstore.example.com
+     #   path: /
+     # tls:
+     # - hosts:
+     #     - objectstore.example.com
+     #   secretName: ceph-objectstore-tls
+     # ingressClassName: nginx
