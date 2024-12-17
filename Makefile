@@ -1,7 +1,7 @@
 all: ur package index
 	@echo "Packaging complete and index.yaml updated."
 
-CHARTS := cluster-issuer ingress-nginx external-secrets cert-manager cilium  argo-cd vault crunchy-postgres-operator crunchy-postgres-cluster rook-ceph-operator rook-ceph-cluster secret-store minio-operator minio-tenant gitlab-operator metallb-operator metallb-config
+CHARTS := cluster-issuer ingress-nginx external-secrets cert-manager cilium  argo-cd vault crunchy-postgres-operator crunchy-postgres-cluster rook-ceph-operator rook-ceph-cluster secret-store minio-operator minio-tenant gitlab-operator metallb-operator metallb-config prometheus-grafana
 
 REPO_URL := https://Ujstor.github.io/helm-charts-system
 
