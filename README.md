@@ -296,6 +296,9 @@ Minio Tenant Helm chart configurated by Ujstor
 | minio-tenant.ingress.api.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |
 | minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
+| minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/proxy-body-size" | string | `"2048m"` |  |
+| minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/proxy-read-timeout" | string | `"1200"` |  |
+| minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/proxy-send-timeout" | string | `"1200"` |  |
 | minio-tenant.ingress.api.enabled | bool | `false` |  |
 | minio-tenant.ingress.api.host | string | `"minio.domain.com"` |  |
 | minio-tenant.ingress.api.ingressClassName | string | `"nginx"` |  |
@@ -306,6 +309,9 @@ Minio Tenant Helm chart configurated by Ujstor
 | minio-tenant.ingress.console.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |
 | minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
+| minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/proxy-body-size" | string | `"2048m"` |  |
+| minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/proxy-read-timeout" | string | `"1200"` |  |
+| minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/proxy-send-timeout" | string | `"1200"` |  |
 | minio-tenant.ingress.console.enabled | bool | `false` |  |
 | minio-tenant.ingress.console.host | string | `"minio-console.domain.com"` |  |
 | minio-tenant.ingress.console.ingressClassName | string | `"nginx"` |  |
@@ -348,6 +354,12 @@ Kube prometheus stack Helm chart configurated by Ujstor
 | prometheus-grafana.coreDns.enabled | bool | `true` |  |
 | prometheus-grafana.defaultRules.rules.windows | bool | `false` |  |
 | prometheus-grafana.grafana.enabled | bool | `false` |  |
+| prometheus-grafana.grafana.persistence.accessModes[0] | string | `"ReadWriteOnce"` |  |
+| prometheus-grafana.grafana.persistence.enabled | bool | `false` |  |
+| prometheus-grafana.grafana.persistence.finalizers[0] | string | `"kubernetes.io/pvc-protection"` |  |
+| prometheus-grafana.grafana.persistence.size | string | `"20Gi"` |  |
+| prometheus-grafana.grafana.persistence.storageClassName | string | `"storageClassName"` |  |
+| prometheus-grafana.grafana.persistence.type | string | `"sts"` |  |
 | prometheus-grafana.kubeApiServer.enabled | bool | `true` |  |
 | prometheus-grafana.kubeApiServer.tlsConfig.insecureSkipVerify | bool | `false` |  |
 | prometheus-grafana.kubeApiServer.tlsConfig.serverName | string | `"kubernetes"` |  |

@@ -6,8 +6,19 @@ prometheus-grafana:
     disabled: {}
     # KubeAPIDown: true
     # NodeRAIDDegraded: true
+
   grafana:
     enabled: false
+    persistence:
+      enabled: false
+      type: sts
+      storageClassName: "storageClassName"
+      accessModes:
+        - ReadWriteOnce
+      size: 20Gi
+      finalizers:
+        - kubernetes.io/pvc-protection
+
   kubernetesServiceMonitors:
     enabled: true
   kubeApiServer:

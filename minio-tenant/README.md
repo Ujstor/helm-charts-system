@@ -18,6 +18,9 @@ Minio Tenant Helm chart configurated by Ujstor
 | minio-tenant.ingress.api.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |
 | minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
+| minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/proxy-body-size" | string | `"2048m"` |  |
+| minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/proxy-read-timeout" | string | `"1200"` |  |
+| minio-tenant.ingress.api.annotations."nginx.ingress.kubernetes.io/proxy-send-timeout" | string | `"1200"` |  |
 | minio-tenant.ingress.api.enabled | bool | `false` |  |
 | minio-tenant.ingress.api.host | string | `"minio.domain.com"` |  |
 | minio-tenant.ingress.api.ingressClassName | string | `"nginx"` |  |
@@ -28,6 +31,9 @@ Minio Tenant Helm chart configurated by Ujstor
 | minio-tenant.ingress.console.annotations."cert-manager.io/cluster-issuer" | string | `"letsencrypt"` |  |
 | minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/backend-protocol" | string | `"HTTPS"` |  |
 | minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/force-ssl-redirect" | string | `"true"` |  |
+| minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/proxy-body-size" | string | `"2048m"` |  |
+| minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/proxy-read-timeout" | string | `"1200"` |  |
+| minio-tenant.ingress.console.annotations."nginx.ingress.kubernetes.io/proxy-send-timeout" | string | `"1200"` |  |
 | minio-tenant.ingress.console.enabled | bool | `false` |  |
 | minio-tenant.ingress.console.host | string | `"minio-console.domain.com"` |  |
 | minio-tenant.ingress.console.ingressClassName | string | `"nginx"` |  |

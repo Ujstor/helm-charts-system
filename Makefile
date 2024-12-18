@@ -1,15 +1,19 @@
-all: ur package index
+all: update-repos ur package index
 	@echo "Packaging complete and index.yaml updated."
 
 CHARTS := cluster-issuer ingress-nginx external-secrets cert-manager cilium  argo-cd vault crunchy-postgres-operator crunchy-postgres-cluster rook-ceph-operator rook-ceph-cluster secret-store minio-operator minio-tenant gitlab-operator metallb-operator metallb-config prometheus-grafana
 
 REPO_URL := https://Ujstor.github.io/helm-charts-system
 
+update-repos:
+	@echo "Updating Helm repositories..."
+	@helm repo update
+
 package: $(CHARTS)
 
 $(CHARTS):
 	@echo "Packaging $@ chart..."
-	@helm dependency build $@ || helm dependency update $@
+	@helm dependency build --skip-refresh $@ || helm dependency update --skip-refresh $@
 	helm package $@ --destination .
 index: package
 	@echo "Generating index.yaml..."

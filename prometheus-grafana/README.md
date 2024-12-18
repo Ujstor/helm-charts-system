@@ -18,6 +18,12 @@ Kube prometheus stack Helm chart configurated by Ujstor
 | prometheus-grafana.coreDns.enabled | bool | `true` |  |
 | prometheus-grafana.defaultRules.rules.windows | bool | `false` |  |
 | prometheus-grafana.grafana.enabled | bool | `false` |  |
+| prometheus-grafana.grafana.persistence.accessModes[0] | string | `"ReadWriteOnce"` |  |
+| prometheus-grafana.grafana.persistence.enabled | bool | `false` |  |
+| prometheus-grafana.grafana.persistence.finalizers[0] | string | `"kubernetes.io/pvc-protection"` |  |
+| prometheus-grafana.grafana.persistence.size | string | `"20Gi"` |  |
+| prometheus-grafana.grafana.persistence.storageClassName | string | `"storageClassName"` |  |
+| prometheus-grafana.grafana.persistence.type | string | `"sts"` |  |
 | prometheus-grafana.kubeApiServer.enabled | bool | `true` |  |
 | prometheus-grafana.kubeApiServer.tlsConfig.insecureSkipVerify | bool | `false` |  |
 | prometheus-grafana.kubeApiServer.tlsConfig.serverName | string | `"kubernetes"` |  |
