@@ -1,0 +1,19 @@
+apiVersion: v2
+name: istiod
+description: Istio control plane Helm Chart
+type: application
+version: 1.0.0
+appVersion: "1.24.2"
+dependencies:
+- name: base
+  version: 1.24.2
+  repository: https://istio-release.storage.googleapis.com/charts
+  tags:
+    - base
+- name: istiod
+  version: 1.24.2
+  repository: https://istio-release.storage.googleapis.com/charts
+  dependencies:
+    - name: base
+  tags:
+    - istiod

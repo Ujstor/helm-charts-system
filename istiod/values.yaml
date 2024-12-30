@@ -1,0 +1,30 @@
+istiod:
+  global:
+    istionamespace: istio-system
+    proxy:
+      clusterdomain: "cluster.local"
+      privileged: false
+      resources:
+        requests:
+          cpu: 100m
+          memory: 128Mi
+        limits:
+          cpu: 2000m
+          memory: 1024Mi
+    waypoint:
+      resources:
+        requests:
+          cpu: 100m
+          memory: 128Mi
+        limits:
+          cpu: "2"
+          memory: 1Gi
+base:
+  global:
+    istionamespace: istio-system
+  base:
+    enablecrdtemplates: true
+    enableistioconfigcrds: true
+  defaultrevision: "default"
+  experimental:
+    stablevalidationpolicy: false
