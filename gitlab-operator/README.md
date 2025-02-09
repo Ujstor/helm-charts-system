@@ -1,6 +1,6 @@
 # gitlab-operator
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.7.1](https://img.shields.io/badge/AppVersion-1.7.1-informational?style=flat-square)
+![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.9.1](https://img.shields.io/badge/AppVersion-1.9.1-informational?style=flat-square)
 
 Gitlab Operator Helm chart configurated by Ujstor
 
@@ -8,7 +8,7 @@ Gitlab Operator Helm chart configurated by Ujstor
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.gitlab.io | gitlab-operator | 1.7.1 |
+| https://charts.gitlab.io | gitlab-operator | 1.9.1 |
 
 ## Values
 

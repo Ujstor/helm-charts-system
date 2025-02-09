@@ -4,3 +4,14 @@
 
 A Helm chart for configuring External Secrets SecretStore
 
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| secretStore.annotations.description | string | `"Kubernetes secrets store"` |  |
+| secretStore.clusterWide | bool | `true` |  |
+| secretStore.labels.environment | string | `"prod"` |  |
+| secretStore.provider.kubernetes.auth.serviceAccount.create | bool | `true` |  |
+| secretStore.provider.kubernetes.auth.serviceAccount.name | string | `"todo-secret-store-sa"` |  |
+| secretStore.provider.type | string | `"kubernetes"` |  |
+

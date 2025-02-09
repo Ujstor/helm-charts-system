@@ -103,7 +103,7 @@ A Cert-Manager ClusterIssuer Helm chart config by Ujstor
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
 
-# postgres-cluster
+# crunchy-postgres-cluster
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.6.0](https://img.shields.io/badge/AppVersion-5.6.0-informational?style=flat-square)
 
@@ -122,7 +122,7 @@ A PGO Cluster Helm chart for Kubernetes
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)
 
-# postgres-operator
+# crunchy-postgres-operator
 
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 5.7.0](https://img.shields.io/badge/AppVersion-5.7.0-informational?style=flat-square)
 
@@ -173,7 +173,7 @@ External-Secrets Helm chart configured by Ujstor
 
 # gitlab-operator
 
-![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.7.1](https://img.shields.io/badge/AppVersion-1.7.1-informational?style=flat-square)
+![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.9.1](https://img.shields.io/badge/AppVersion-1.9.1-informational?style=flat-square)
 
 Gitlab Operator Helm chart configurated by Ujstor
 
@@ -181,7 +181,7 @@ Gitlab Operator Helm chart configurated by Ujstor
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.gitlab.io | gitlab-operator | 1.7.1 |
+| https://charts.gitlab.io | gitlab-operator | 1.9.1 |
 
 ## Values
 
@@ -466,6 +466,17 @@ Rook Ceph Operator Helm Chart
 ![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.0.0](https://img.shields.io/badge/AppVersion-1.0.0-informational?style=flat-square)
 
 A Helm chart for configuring External Secrets SecretStore
+
+## Values
+
+| Key | Type | Default | Description |
+|-----|------|---------|-------------|
+| secretStore.annotations.description | string | `"Kubernetes secrets store"` |  |
+| secretStore.clusterWide | bool | `true` |  |
+| secretStore.labels.environment | string | `"prod"` |  |
+| secretStore.provider.kubernetes.auth.serviceAccount.create | bool | `true` |  |
+| secretStore.provider.kubernetes.auth.serviceAccount.name | string | `"todo-secret-store-sa"` |  |
+| secretStore.provider.type | string | `"kubernetes"` |  |
 
 
 ![purple-divider](https://user-images.githubusercontent.com/7065401/52071927-c1cd7100-2562-11e9-908a-dde91ba14e59.png)

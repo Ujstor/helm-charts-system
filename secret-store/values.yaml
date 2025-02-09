@@ -1,17 +1,17 @@
 # # Kubernets
-# secretStore:
-#   clusterWide: true
-#   provider:
-#     type: kubernetes
-#     kubernetes:
-#       auth:
-#         serviceAccount:
-#           create: true
-#           name: "todo-secret-store-sa"
-#   labels:
-#     environment: prod
-#   annotations:
-#     description: "Kubernetes secrets store"
+secretStore:
+  clusterWide: true
+  provider:
+    type: kubernetes
+    kubernetes:
+      auth:
+        serviceAccount:
+          create: true
+          name: "todo-secret-store-sa"
+  labels:
+    environment: prod
+  annotations:
+    description: "Kubernetes secrets store"
 
 # nameOverride: ""
 # fullnameOverride: ""
